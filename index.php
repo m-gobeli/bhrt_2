@@ -36,14 +36,14 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">BHRT</a>
+                <a class="navbar-brand" href="index.php">BHRT</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#login">Login</a>
+                        <a href="php/login.php">Login</a>
                     </li>
                 </ul>
             </div>
@@ -82,21 +82,21 @@
                     <form class="form-horizontal" id="registration_form" action="index.php" method="post">
                       <!--stimmt diese "Action"? weiss nicht wohin schicken :)-->
           						<div class="form-group">
-          						  <label class="control-label col-sm-2" for="firstname">Vorname:</label>
+          						  <label class="control-label col-sm-2 field required" for="firstname">Vorname*:</label>
           						  <div class="col-sm-10">
-          							<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Max" value="">
+          							<input type="text" class="form-control" id="firstname" tabindex="1" name="firstname" placeholder="Max" value="">
           						  </div>
           						</div>
           						<div class="form-group">
-          						  <label class="control-label col-sm-2" for="lastname">Nachname:</label>
+          						  <label class="control-label col-sm-2 field required" for="lastname">Nachname*:</label>
           						  <div class="col-sm-10">
-          							<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Muster" value="">
+          							<input type="text" class="form-control" id="lastname" tabindex="2" name="lastname" placeholder="Muster" value="">
           						  </div>
           						</div>
                       <div class="form-group">
-                        <label class="control-label col-sm-2" for="taetigkeit">Tätigkeit:</label>
+                        <label class="control-label col-sm-2 field required" for="taetigkeit">Tätigkeit*:</label>
                         <div class="col-sm-10">
-                        <select name="taetigkeit" class="form-control" id="taetigkeit">
+                        <select name="taetigkeit" class="form-control" id="taetigkeit" tabindex="3">
                           <option value="schueler" selected>SchülerIn</option>
                           <option value="student">StudentIn</option>
                           <option value="berufstaetig">Berufstätig</option>
@@ -104,26 +104,26 @@
                         </div>
                       </div>
           						<div class="form-group">
-          						  <label class="control-label col-sm-2" for="email">E-Mail:</label>
+          						  <label class="control-label col-sm-2 field required" for="email">E-Mail*:</label>
           						  <div class="col-sm-10">
-          							<input type="email" class="form-control" id="email" name="email" placeholder="max@muster.ch" value="">
+          							<input type="email" class="form-control" id="email" tabindex="4" name="email" placeholder="max@muster.ch" value="">
           						  </div>
           						</div>
           						<div class="form-group">
-          						  <label class="control-label col-sm-2" for="pwd">Passwort:</label>
+          						  <label class="control-label col-sm-2 field required" for="pwd">Passwort*:</label>
           						  <div class="col-sm-10">
-          							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Passwort eingeben">
+          							<input type="password" class="form-control" id="pwd" tabindex="5" name="pwd" placeholder="Passwort eingeben">
           						  </div>
           						</div>
                       <div class="form-group">
-          						  <label class="control-label col-sm-2" for="confirm_pwd">Passwort bestätigen:</label>
+          						  <label class="control-label col-sm-2 field required" for="confirm_pwd">Passwort bestätigen*:</label>
           						  <div class="col-sm-10">
-          							<input type="password" class="form-control" id="confirm_pwd" name="confirm_pwd" placeholder="Passwort wiederholen">
+          							<input type="password" class="form-control" id="confirm_pwd" tabindex="6" name="confirm_pwd" placeholder="Passwort wiederholen">
           						  </div>
           						</div>
           						<div class="form-group">
           						  <div>
-          							<button type="submit" class="btn btn-default btn-xl sr-button" name="register_submit">Test starten!</button>
+          							<button type="submit" class="btn btn-default btn-xl sr-button" id="registration_submit" tabindex="7" name="registration_submit">Test starten!</button>
           						  </div>
           						</div>
 					  </form>
@@ -132,45 +132,6 @@
 		</div>
 	</section>
 <!--Ende Registrierung -->
-
-<!-- Bilder für Schnellauswahl Test und Personalberater -->
-    <section class="no-padding" id="services">
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-6 col-sm-6">
-                    <a href="img/portfolio/fullsize/typologien.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/typologien.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Test für...
-                                </div>
-                                <div class="project-name">
-                                    Schüler<br>Studenten<br>Berufstätige
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <a href="img/portfolio/fullsize/personalberater.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/personalberater.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Weiterführende Infos für...
-                                </div>
-                                <div class="project-name">
-                                    Personalberater
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- Ende Bilder für Schnellauswahl -->
 
 <!-- Über BHRT -->
     <section id="about">
