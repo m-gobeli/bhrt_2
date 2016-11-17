@@ -78,7 +78,9 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Registrieren</h2>
                     <hr class="light">
-                    <form class="form-horizontal">
+                    <p>Gleich gehts los... Bevor der Test beginnt, musst Du Dich noch kurz registrieren.<br>Du hast schon ein Profil? Ja dann los, logge Dich <a href="html/login.php">hier</a> ein.</p>
+                    <form class="form-horizontal" id="registration_form" action="index.php" method="post">
+                      //stimmt diese "Action"? weiss nicht wohin schicken :)
           						<div class="form-group">
           						<label class="control-label">Anrede:</label>
           							<input type="radio" name="gender" value="f"> Frau
@@ -118,65 +120,10 @@
 			</div>
 		</div>
 	</section>
+<!--Ende Registrierung -->
 
-
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Wofür steht BHRT?</h2>
-                    <hr class="light">
-                    <p class="text-faded">Das ist kurz für Business Human Resources Typologies. Klingt wichtig. Ist es auch.<br>Für Dich persönlich. Es zeigt Dir auf, welche berufsrelevanten Rollen Dir liegen. Ob nun zur Selbsteinschätzung oder ob Du wissen möchtest, in welche Richtung deine Aus-/Weiterbildung gehen könnte, dieser Test hilft Dir in jeder Lebenslage weiter.</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Jetzt loslegen!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="personalberater">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="no-padding" id="kontakt">
+<!-- Bilder für Schnellauswahl Test und Personalberater -->
+    <section class="no-padding" id="services">
         <div class="container-fluid">
             <div class="row no-gutter popup-gallery">
                 <div class="col-lg-6 col-sm-6">
@@ -212,35 +159,21 @@
             </div>
         </div>
     </section>
+<!-- Ende Bilder für Schnellauswahl -->
 
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Empfehle den Test Deinen Freunden weiter!</h2>
-                <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Jetzt teilen</a>
-            </div>
-        </div>
-    </aside>
-
-    <section id="login">
+<!-- Über BHRT -->
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Du hast eine Frage?</h2>
+                    <h2 class="section-heading">Wofür steht BHRT?</h2>
                     <hr class="primary">
-                    <p>Wir stehen Dir gerne Rede und Antwort. Ruf uns an oder schicke uns eine E-Mail und wir werden uns schnellstmöglich bei Dir zurückmelden.</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>081-286-24-24</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:hochschule@htwchur.ch">info@bhrt.ch</a></p>
+                    <p>Das ist kurz für Business Human Resources Typologies. Klingt wichtig. Ist es auch.<br>Für Dich persönlich. Es zeigt Dir auf, welche berufsrelevanten Rollen Dir liegen. Ob nun zur Selbsteinschätzung oder ob Du wissen möchtest, in welche Richtung deine Aus-/Weiterbildung gehen könnte, dieser Test hilft Dir in jeder Lebenslage weiter.</p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Ende Über BHRT -->
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
