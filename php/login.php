@@ -1,3 +1,6 @@
+<?php
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,42 +61,13 @@
         <!-- /.container-fluid -->
     </nav>
 
-
-	<header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 id="homeHeading">Gleich gehts los...</h1>
-                <hr>
-                <p>Bevor der Test beginnt, musst Du Dich noch kurz registrieren. Du hast schon ein Profil?<br>Ja dann los, logge Dich hier ein.</p>
-            </div>
-        </div>
-    </header>
-
-
     <section class="bg-primary" id="test">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Registrieren</h2>
+                    <h2 class="section-heading">Login</h2>
                     <hr class="light">
                     <form class="form-horizontal">
-						<div class="form-group">
-						<label class="control-label">Anrede:</label>
-							<input type="radio" name="gender" value="f"> Frau
-							<input type="radio" name="gender" value="m"> Mann
-						</div>
-						<div class="form-group">
-						  <label class="control-label col-sm-2" for="firstname">Vorname:</label>
-						  <div class="col-sm-10">
-							<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Max">
-						  </div>
-						</div>
-						<div class="form-group">
-						  <label class="control-label col-sm-2" for="lastname">Nachname:</label>
-						  <div class="col-sm-10">
-							<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Muster">
-						  </div>
-						</div>
 						<div class="form-group">
 						  <label class="control-label col-sm-2" for="email">E-Mail:</label>
 						  <div class="col-sm-10">
@@ -108,7 +82,7 @@
 						</div>
 						<div class="form-group">
 						  <div>
-							<button type="submit" class="btn btn-default btn-xl sr-button">Test starten!</button>
+							<a href="profil.php" class="btn btn-default btn-xl sr-button">anmelden</a>
 						  </div>
 						</div>
 					  </form>
@@ -116,51 +90,6 @@
 			</div>
 		</div>
 	</section>
-
-
-	<section id="personalberater">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
