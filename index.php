@@ -60,7 +60,7 @@
                 <hr>
                 <p>Hier kannst Du einen Test machen, der Dir als Hilfestellung zur Laufbahngestaltung dient. Nachdem Du alle Fragen des Tests beantwortet hast, kriegst Du eine Einschätzung in bestimmte berufsrelevante Typologien. Worauf wartest du noch?</p>
 				<div class="col-lg-4 col-lg-offset-2 text-center">
-                <a href="#registration" class="btn btn-primary btn-xl page-scroll">Test jetzt starten!</a>
+                <a href="#registration" class="btn btn-primary btn-xl page-scroll">Jetzt registrieren!</a>
 				</div>
 				<div class="col-lg-4 text-center">
 				<a href="#personalberater" class="btn btn-primary btn-xl page-scroll">Infos für Personalberater</a>
