@@ -80,28 +80,33 @@
                     <hr class="light">
                     <p>Gleich gehts los... Bevor der Test beginnt, musst Du Dich noch kurz registrieren.<br>Du hast schon ein Profil? Ja dann los, logge Dich <a href="html/login.php">hier</a> ein.</p>
                     <form class="form-horizontal" id="registration_form" action="index.php" method="post">
-                      //stimmt diese "Action"? weiss nicht wohin schicken :)
-          						<div class="form-group">
-          						<label class="control-label">Anrede:</label>
-          							<input type="radio" name="gender" value="f"> Frau
-          							<input type="radio" name="gender" value="m"> Mann
-          						</div>
+                      <!--stimmt diese "Action"? weiss nicht wohin schicken :)-->
           						<div class="form-group">
           						  <label class="control-label col-sm-2" for="firstname">Vorname:</label>
           						  <div class="col-sm-10">
-          							<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Max">
+          							<input type="text" class="form-control" id="firstname" name="firstname" placeholder="Max" value="">
           						  </div>
           						</div>
           						<div class="form-group">
           						  <label class="control-label col-sm-2" for="lastname">Nachname:</label>
           						  <div class="col-sm-10">
-          							<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Muster">
+          							<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Muster" value="">
           						  </div>
           						</div>
+                      <div class="form-group">
+                        <label class="control-label col-sm-2" for="taetigkeit">Tätigkeit:</label>
+                        <div class="col-sm-10">
+                        <select name="taetigkeit" class="form-control" id="taetigkeit">
+                          <option value="schueler" selected>SchülerIn</option>
+                          <option value="student">StudentIn</option>
+                          <option value="berufstaetig">Berufstätig</option>
+                        </select>
+                        </div>
+                      </div>
           						<div class="form-group">
           						  <label class="control-label col-sm-2" for="email">E-Mail:</label>
           						  <div class="col-sm-10">
-          							<input type="email" class="form-control" id="email" name="email" placeholder="max@muster.ch">
+          							<input type="email" class="form-control" id="email" name="email" placeholder="max@muster.ch" value="">
           						  </div>
           						</div>
           						<div class="form-group">
@@ -110,9 +115,15 @@
           							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Passwort eingeben">
           						  </div>
           						</div>
+                      <div class="form-group">
+          						  <label class="control-label col-sm-2" for="confirm_pwd">Passwort bestätigen:</label>
+          						  <div class="col-sm-10">
+          							<input type="password" class="form-control" id="confirm_pwd" name="confirm_pwd" placeholder="Passwort wiederholen">
+          						  </div>
+          						</div>
           						<div class="form-group">
           						  <div>
-          							<button type="submit" class="btn btn-default btn-xl sr-button">Test starten!</button>
+          							<button type="submit" class="btn btn-default btn-xl sr-button" name="register_submit">Test starten!</button>
           						  </div>
           						</div>
 					  </form>
