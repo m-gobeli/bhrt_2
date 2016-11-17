@@ -43,16 +43,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#test">Test</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#personalberater">Personalberater</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#kontakt">Kontakt</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Login</a>
+                        <a class="page-scroll" href="#test">Startseite</a>
                     </li>
                 </ul>
             </div>
