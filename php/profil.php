@@ -34,14 +34,24 @@
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">BHRT</a>
+<<<<<<< HEAD
+                <a class="navbar-brand" href="#page-top">BHRT</a>
+=======
+                <a class="navbar-brand" href="../index.php">BHRT</a>
+>>>>>>> 847f93848426600c34bb983d109796c89322c9f8
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#login">Login</a>
+                        <a href="profil.php">Profil</a>
+                    </li>
+                    <li>
+                        <a href="#login">Test</a>
+                    </li>
+                    <li>
+                        <a href="../index.php">abmelden</a>
                     </li>
                 </ul>
             </div>
