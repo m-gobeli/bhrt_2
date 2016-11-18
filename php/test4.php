@@ -69,16 +69,6 @@ if(!isset($_SESSION['id'])){
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <aside class="bg-dark">
-      <br>
-      <br>
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Starte jetzt deinen Laufbahntest</h2>
-                  <p>Finde heraus was für ein Typ du bist und welche Berufsfelder am besten für dich geeignet sind</p>
-            </div>
-        </div>
-    </aside>
 
     <section id="about">
         <div class="container">
@@ -93,7 +83,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">6</h3>
+                <h3 class="section-heading">16</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -114,7 +104,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">7</h3>
+                <h3 class="section-heading">17</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -136,7 +126,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">8</h3>
+                <h3 class="section-heading">18</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -157,7 +147,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">9</h3>
+                <h3 class="section-heading">19</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -178,7 +168,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">10</h3>
+                <h3 class="section-heading">20</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -193,9 +183,14 @@ if(!isset($_SESSION['id'])){
                         </form>
                       </div>
                   </div>
-                  <a href="../php/test3.php" class="btn btn-default btn-xl sr-button">weiter</a>
+                  <a href="../php/test5.php" class="btn btn-default btn-xl sr-button">weiter</a>
               </div>
           </div>
+        </div>
+
+    </section>
+                </div>
+            </div>
         </div>
 
     </section>

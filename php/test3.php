@@ -83,7 +83,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">21</h3>
+                <h3 class="section-heading">11</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -105,7 +105,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">22</h3>
+                <h3 class="section-heading">12</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -127,7 +127,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">23</h3>
+                <h3 class="section-heading">13</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -148,7 +148,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">24</h3>
+                <h3 class="section-heading">14</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -169,7 +169,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">25</h3>
+                <h3 class="section-heading">15</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -184,118 +184,10 @@ if(!isset($_SESSION['id'])){
                         </form>
                       </div>
                   </div>
+                  <a href="../php/test4.php" class="btn btn-default btn-xl sr-button">weiter</a>
               </div>
           </div>
         </div>
-
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">26</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">27</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">28</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">29</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">30</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-                  <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">auswerten</a>
-              </div>
-          </div>
-        </div>
-
     </section>
                 </div>
             </div>
