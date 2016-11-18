@@ -16,7 +16,7 @@ if(!isset($_SESSION['id'])){
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>BHRT Laufbahnberatung</title>
 
     <!-- Bootstrap CSS -->
@@ -100,7 +100,8 @@ if(!isset($_SESSION['id'])){
                         <form>
                           <input type="range" class="input[type=range]" name="points" min="0.1" max="0.9" step="0.1">
                             <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
+                              <p>geringes Interesse</p>  <source textarea="(max-width: 375px)" srcset="-">
+                    <source mtextarea="(max-width: 768px)" srcset="geringes Interesse">
                             </div>
                             <div class="col-lg-4 col-lg-offset-4 right">
                               <p>grosses Interesse</p>
