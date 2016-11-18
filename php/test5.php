@@ -8,6 +8,11 @@ if(!isset($_SESSION['id'])){
 
   require_once('../system/data.php');
   require_once('../system/security.php');
+
+//Fragen abrufen und in Variabel abspeichern
+$result = get_fragen();
+$fragen = mysqli_fetch_assoc($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
