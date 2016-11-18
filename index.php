@@ -82,7 +82,7 @@ if(isset($_POST['registration_submit'])){
 
     <!-- eigenes CSS-->
     <link href="css/design.css" rel="stylesheet">
-    
+
 </head>
 
 <body id="page-top">
