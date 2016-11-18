@@ -46,13 +46,13 @@ function get_username($user_id){
 //Profildaten aktualisieren
 function update_user($user_id,$firstname,$lastname,$email,$password,$confirm_password,$taetigkeit){
   $sql_ok = false;
-  $sql = "UPDATE user SET ";
+  $sql = "UPDATE user_tabelle SET ";
   if($firstname !=""){
-    $sql.= "firstname ='$firstname', ";
+    $sql.= "vorname ='$firstname', ";
     $sql_ok = true;
   }
   if($lastname !=""){
-    $sql.= "lastname ='$lastname', ";
+    $sql.= "name ='$lastname', ";
     $sql_ok = true;
   }
   if($email !=""){
@@ -66,12 +66,16 @@ function update_user($user_id,$firstname,$lastname,$email,$password,$confirm_pas
   $sql = substr_replace($sql,' ',-2,1);
 
   $sql.= "WHERE user_id = $user_id;";
-  echo $sql;
   if($sql_ok){
     return get_result($sql);
   }else{
     return false;
   }
+}
+
+//Profil löschen
+function delete_user($user_id){
+  $sql = "DELETE * FROM user_tabelle, user_antworten WHERE user_id = '$user_id';";
 }
 
 
