@@ -143,7 +143,7 @@ if(isset($_POST['registration_submit'])){
                     <p>Gleich gehts los... Bevor der Test beginnt, musst Du Dich noch kurz registrieren.<br>Du hast schon ein Profil? Ja dann los, logge Dich <a href="php/login.php" style="color:white">
                     HIER</a> ein.</p>
 <!--action- attribut gelöscht. Bei Fehler wieder einfügen-->
-                    <form class="form-horizontal" id="registration_form" method="post">
+                    <form class="form-horizontal" id="registration_form" method="post" action="index.php">
           						<div class="form-group">
           						  <label class="control-label col-sm-2 field required" for="firstname">Vorname*:</label>
           						  <div class="col-sm-10">
