@@ -13,7 +13,7 @@ if(!isset($_SESSION['id'])){
   $result = get_username($user_id);
   $user = mysqli_fetch_assoc($result);
 
-  ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +49,7 @@ if(!isset($_SESSION['id'])){
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">BHRT</a>
+                <a class="navbar-brand" href="../index.php">BHRT</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -72,23 +72,19 @@ if(!isset($_SESSION['id'])){
     </nav>
 
 	<!-- Userprofil -->
-	<section class="bg-primary" id="registration">
+	<section class="bg-primary" id="userprofil">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-<!-- Profildaten über Funktion get_username abrufen -->
+                    <!-- Profildaten über Funktion get_username abrufen -->
                     <h2 class="section-heading">Dein Profil:<br><?php echo $user['vorname'] . " " . $user['name'];?></h2>
                     <hr class="light">
                     <form class="form-horizontal">
-          				  <div>
-                      <p>Vorname:<?php echo $user['firstname'] . " " . $user['lastname']; ?></p>
-                      <p>Nachname: *PHP* </p>
-                      <p>Email: PHP </p>
-                      <p>Tätigkeit: </p>
+                      <p>Vorname:<?php echo " " .$user['vorname'];?></p>
+                      <p>Nachname:<?php echo " " .$user['name'];?></p>
+                      <p>Email:<?php echo " " .$user['email'];?></p>
+                      <p>Tätigkeit:<?php echo " " .$user['taetigkeit'];?> </p>
                       </div>
-
-
-
           	<!--					<div class="form-group">
           						  <label class="control-label col-sm-2" for="pwd">Passwort:</label>
           						  <div class="col-sm-10">
@@ -96,25 +92,91 @@ if(!isset($_SESSION['id'])){
           						  </div>
           						</div>
           						<div class="form-group"> -->
-          						  <div>
-          							<button type="submit" class="btn btn-default btn-xl sr-button">bearbeiten</button>
-          						  </div>
-          						</div>
+<!-- Button, der das Modale Fenster zur Datenbearbeitung aufruft -->
+                      <div>
+                        <button type="button" class="btn btn-default btn-xl sr-button" data-toggle="modal" data-target="#myModal">bearbeiten</button>
+                      </div>
+                  </div>
 					  </form>
 					</div>
 			</div>
 		</div>
 	</section>
+<!-- Modales Fenster zur Userdatenaktualisierung aus w3schools -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Profildaten bearbeiten</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group row">
+          <label for="Vorname" class="col-sm-2 col-xs-12 form-control-label">Vorname</label>
+            <div class="col-sm-5 col-xs-6">
+              <input  type="text" class="form-control form-control-sm"
+                      id="Vorname" placeholder="Max"
+                      name="firstname" value="<?php echo $user['vorname'];?>">
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="Nachname" class="col-sm-2 col-xs-12 form-control-label">Nachname</label>
+            <div class="col-sm-5 col-xs-6">
+              <input  type="text" class="form-control form-control-sm"
+                      id="Nachname" placeholder="Muster"
+                      name="lastname" value="<?php echo $user['name']; ?>">
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="Email" class="col-sm-2 col-xs-12 form-control-label">Email</label>
+            <div class="col-sm-5 col-xs-6">
+              <input  type="email" class="form-control form-control-sm"
+                      id="Email" placeholder="max.muster@gmx.ch"
+                      name="lastname" value="<?php echo $user['email']; ?>">
+            </div>
+        </div>
+<!-- Inhalt von Passwort sollte nicht angezeigt werden -->
+        <div class="form-group row">
+          <label for="Passwort" class="col-sm-2 col-xs-12 form-control-label">Passwort</label>
+            <div class="col-sm-5 col-xs-6">
+              <input  type="text" class="form-control form-control-sm"
+                      id="Passwort" placeholder="Passwort"
+                      name="passwort" value="<?php echo $user['name']; ?>">
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="Taetigkeit" class="col-sm-2 col-xs-12 form-control-label">Tätigkeit</label>
+            <div class="col-sm-5 col-xs-6">
+              <select   name="taetigkeit" class="form-control form-control-sm" id="taetigkeit">
+                <option selected="<?php echo $user['taetigkeit'];?>"></option>
+                <option value="schueler" selected>SchülerIn</option>
+                <option value="student">StudentIn</option>
+                <option value="berufstaetig">Berufstätig</option>
+              </select>
+            </div>
+        </div>
+
+      </div>
+
+<!-- Speichern-Button -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-xl sr-button" data-dismiss="modal">Speichern</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 <!-- Testergebnisse User -->
-    <section id="about">
+    <section id="testergebnisse">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Dein Typ</h2>
                     <hr class="light">
-                    <p>Lorem Impsum Datenbank-Abfrage lalala. </p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Jetzt loslegen!</a>
+                    <p>Hier wird die Auswertung des Users dargestellt. Dazu braucht es eine neue Funktion in data.php </p>
+                    <a href="test.php" class="page-scroll btn btn-default btn-xl sr-button">Test wiederholen</a>
                 </div>
             </div>
         </div>
