@@ -90,12 +90,7 @@ if(isset($_POST['registration_submit'])){
     <link href="css/creative.min.css" rel="stylesheet">
 
     <!-- eigenes CSS-->
-<<<<<<< HEAD
-    <link href="../css/design.css" rel="stylesheet" type="text/css">
-=======
-    <link href="css/design.css" rel="stylesheet">
->>>>>>> 133cf8826dc10fb21f45edca704388bd045df99b
-
+    <link href="css/design.css" rel="stylesheet" type="text/css">
 </head>
 
 <body id="page-top">
