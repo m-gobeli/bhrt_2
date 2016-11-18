@@ -23,6 +23,9 @@
     <!-- Theme CSS -->
     <link href="../css/creative.min.css" rel="stylesheet">
 
+    <!-- eigenes CSS-->
+    <link href="../css/design.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body id="page-top">
@@ -73,33 +76,116 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Wie stark interessierst du dich für folgende Tätigkeiten?</h2>
                     <hr class="primary">
-                      <div class="boxed">
-                        <p>This text is enclosed in a box.</p>
-
-                      </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="login">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Du hast eine Frage?</h2>
-                    <hr class="primary">
-                    <p>Wir stehen Dir gerne Rede und Antwort. Ruf uns an oder schicke uns eine E-Mail und wir werden uns schnellstmöglich bei Dir zurückmelden.</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x sr-contact"></i>
-                    <p>081-286-24-24</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
-                    <p><a href="mailto:hochschule@htwchur.ch">info@bhrt.ch</a></p>
+                    <h3 class="section-heading">Frage 1</h3>
+                    <div class="boxed">
+                      <p> Fragentext</p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 2</h3>
+                    <div class="boxed">
+                      <p> Fragentext</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 3</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 4</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 5</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 6</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 7</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 8</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 9</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 10</h3>
+                      <div class="boxed">
+                        <p> Fragentext</p>
+                      </div>
+                      <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">weiter</a>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <!-- jQuery -->
