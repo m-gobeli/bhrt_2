@@ -43,21 +43,35 @@ function get_username($user_id){
   return get_result($sql);
 }
 
+//Profildaten aktualisieren
+function update_user($user_id,$firstname,$lastname,$email,$password,$confirm_password,$taetigkeit){
+  $sql_ok = false;
+  $sql = "UPDATE user SET ";
+  if($firstname !=""){
+    $sql.= "firstname ='$firstname', ";
+    $sql_ok = true;
+  }
+  if($lastname !=""){
+    $sql.= "lastname ='$lastname', ";
+    $sql_ok = true;
+  }
+  if($email !=""){
+    $sql.= "email ='$email', ";
+    $sql_ok = true;
+  }
+  if($password !="" && $confirm_password == $password){
+    $sql.= "passwort ='$password', ";
+    $sql_ok = true;
+  }
+  $sql = substr_replace($sql,' ',-2,1);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  $sql.= "WHERE user_id = $user_id;";
+  echo $sql;
+  if($sql_ok){
+    return get_result($sql);
+  }else{
+    return false;
+  }
+}
 
 ?>

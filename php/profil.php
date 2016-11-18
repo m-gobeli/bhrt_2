@@ -13,6 +13,19 @@ if(!isset($_SESSION['id'])){
   $result = get_username($user_id);
   $user = mysqli_fetch_assoc($result);
 
+//Profildaten-Änderungen speichern
+if(isset($_POST['update_submit'])){
+      $firstname = filter_data($_POST['firstname']);
+      $lastname = filter_data($_POST['lastname']);
+      $email = filter_data($_POST['email']);
+      $password = filter_data($_POST['password']);
+      $confirm_password = filter_data($_POST['confirm_password']);
+      $taetigkeit = filter_data($_POST['taetigkeit']);
+
+      $result = update_user($user_id);
+      $user = mysqli_fetch_assoc($result);
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -102,7 +115,7 @@ if(!isset($_SESSION['id'])){
 			</div>
 		</div>
 	</section>
-<!-- Modales Fenster zur Userdatenaktualisierung aus w3schools -->
+<!-- Modales Fenster zur Userdatenbearbeitung aus w3schools und p42-->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
@@ -134,26 +147,33 @@ if(!isset($_SESSION['id'])){
             <div class="col-sm-5 col-xs-6">
               <input  type="email" class="form-control form-control-sm"
                       id="Email" placeholder="max.muster@gmx.ch"
-                      name="lastname" value="<?php echo $user['email']; ?>">
+                      name="email" value="<?php echo $user['email']; ?>">
             </div>
         </div>
 <!-- Inhalt von Passwort sollte nicht angezeigt werden -->
         <div class="form-group row">
           <label for="Passwort" class="col-sm-2 col-xs-12 form-control-label">Passwort</label>
             <div class="col-sm-5 col-xs-6">
-              <input  type="text" class="form-control form-control-sm"
+              <input  type="passwort" class="form-control form-control-sm"
                       id="Passwort" placeholder="Passwort"
-                      name="passwort" value="<?php echo $user['name']; ?>">
+                      name="password" value="<?php echo $user['passwort']; ?>">
+            </div>
+        </div>
+        <div class="form-group row">
+          <label for="Passwort_Conf" class="col-sm-2 col-xs-12 form-control-label">Passwort bestätigen</label>
+            <div class="col-sm-5 col-xs-6">
+              <input  type="passwort" class="form-control form-control-sm"
+                      id="Passwort_Conf" placeholder="Passwort"
+                      name="confirm_password" value="<?php echo $user['passwort']; ?>">
             </div>
         </div>
         <div class="form-group">
           <label for="Taetigkeit" class="col-sm-2 col-xs-12 form-control-label">Tätigkeit</label>
             <div class="col-sm-5 col-xs-6">
               <select   name="taetigkeit" class="form-control form-control-sm" id="taetigkeit">
-                <option selected="<?php echo $user['taetigkeit'];?>"></option>
-                <option value="schueler" selected>SchülerIn</option>
-                <option value="student">StudentIn</option>
-                <option value="berufstaetig">Berufstätig</option>
+                <option <?php if($user['taetigkeit'] == "schueler") echo "selected"; ?> value="schueler">SchülerIn</option>
+                <option <?php if($user['taetigkeit'] == "student") echo "selected"; ?> value="student">StudentIn</option>
+                <option <?php if($user['taetigkeit'] == "berufstaetig") echo "selected"; ?> value="berufstaetig">Berufstätig</option>
               </select>
             </div>
         </div>
@@ -162,12 +182,12 @@ if(!isset($_SESSION['id'])){
 
 <!-- Speichern-Button -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-default btn-xl sr-button" data-dismiss="modal">Speichern</button>
+        <button type="submit" class="btn btn-success btn-sm" name="update_submit" data-dismiss="modal">Speichern</button>
       </div>
     </div>
-
   </div>
 </div>
+
 <!-- Testergebnisse User -->
     <section id="testergebnisse">
         <div class="container">
