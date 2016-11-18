@@ -3,13 +3,42 @@ session_start();
 if(isset($_SESSION['id'])) unset($_SESSION['id']);
 session_destroy();
 
+require_once('../system/data.php');
+require_once('../system/security.php');
+
 $error = false;
 $error_msg = "";
 $success = false;
 $success_msg = "";
 
-$success=true;
-$success_msg.="Glückwunsch! Sie haben sich erfolgreich registiert.</br> Bitte loggen Sie sich jetzt ein.";
+// Wäre toll, wenn wir das noch hinkriegen: Success-msg nach Registration
+//$success=true;
+// $success_msg.="Glückwunsch! Sie haben sich erfolgreich registiert.</br> Bitte loggen Sie sich jetzt ein.";
+
+if(isset($_POST['login_submit'])){
+  if(!empty($_POST['email']) && !empty($_POST['password'])){
+    $email = filter_data($_POST['email']);
+    $password = filter_data($_POST['password']);
+
+    $db = get_db_connection();
+    $result = login($email,$password); //die Werte werden der login-function in data.php übergeben
+//Validierung, ob der User gültig (einmalig) ist u. user_id wird an Session übergeben
+    $row_count = mysqli_num_rows($result);
+    if($row_count == 1){
+      $user = mysqli_fetch_assoc($result);
+      session_start();
+      $_SESSION['id'] = $user['user_id'];
+      header("Location:profil.php");
+    }else{
+      $error = true;
+      $error_msg .= "Leider konnten wir Ihre Email oder Passwort nicht eindeutig identifizieren.</br>";
+    }
+  }else{
+    $error = true;
+    $error_msg .="Eingabe fehlt. Bitte füllen Sie beide Felder aus.<br/>";
+  }
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -40,6 +69,8 @@ $success_msg.="Glückwunsch! Sie haben sich erfolgreich registiert.</br> Bitte l
 <body id="page-top">
     <!-- Ausgabe Erfolgsmeldung -->
   <?php   if($error) echo $success_msg ; ?>
+  <!-- Ausgabe Fehlermeldung -->
+  <?php   if($error) echo $error_msg ; ?>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -60,7 +91,7 @@ $success_msg.="Glückwunsch! Sie haben sich erfolgreich registiert.</br> Bitte l
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Login</h2>
                     <hr class="light">
-                    <form class="form-horizontal">
+                    <form class="form-horizontal" method="post">
 						<div class="form-group">
 						  <label class="control-label col-sm-2" for="email">E-Mail:</label>
 						  <div class="col-sm-10">
@@ -68,16 +99,16 @@ $success_msg.="Glückwunsch! Sie haben sich erfolgreich registiert.</br> Bitte l
 						  </div>
 						</div>
 						<div class="form-group">
-						  <label class="control-label col-sm-2" for="pwd">Passwort:</label>
+						  <label class="control-label col-sm-2" for="password">Passwort:</label>
 						  <div class="col-sm-10">
-							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Passwort eingeben">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Passwort eingeben">
 						  </div>
 						</div>
-						<div class="form-group">
-						  <div>
-							<a href="profil.php" class="btn btn-default btn-xl sr-button">anmelden</a>
-						  </div>
-						</div>
+            <div class="form-group">
+              <div>
+              <button type="submit" class="btn btn-default btn-xl sr-button" id="login_submit" name="login_submit">einloggen</button>
+              </div>
+            </div>
 					  </form>
 					</div>
 			</div>

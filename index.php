@@ -52,7 +52,6 @@ if(isset($_POST['registration_submit'])){
       if(register($firstname,$lastname,$taetigkeit,$email, $password)){
 // Hier auf die Login-Seite verlinken u. erst dort die success msg anzeigen !!
           header("Location:php/login.php");
-          mysqli_close($db);
         }else{
           $error=true;
           $error_msg.= "Leider ist die Datenbankverbindung schiefgelaufen. Versuchen Sie es bitte erneut.";
@@ -63,7 +62,6 @@ if(isset($_POST['registration_submit'])){
     }
   }
 }
-
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -142,9 +140,9 @@ if(isset($_POST['registration_submit'])){
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Registrieren</h2>
                     <hr class="light">
-                    <p>Gleich gehts los... Bevor der Test beginnt, musst Du Dich noch kurz registrieren.<br>Du hast schon ein Profil? Ja dann los, logge Dich <a href="html/login.php">hier</a> ein.</p>
-                    <form class="form-horizontal" id="registration_form" action="index.php" method="post">
-                      <!--stimmt diese "Action"? weiss nicht wohin schicken :)-->
+                    <p>Gleich gehts los... Bevor der Test beginnt, musst Du Dich noch kurz registrieren.<br>Du hast schon ein Profil? Ja dann los, logge Dich <a href="php/login.php">HIER</a> ein.</p>
+<!--action- attribut gelöscht. Bei Fehler wieder einfügen-->
+                    <form class="form-horizontal" id="registration_form" method="post">
           						<div class="form-group">
           						  <label class="control-label col-sm-2 field required" for="firstname">Vorname*:</label>
           						  <div class="col-sm-10">
