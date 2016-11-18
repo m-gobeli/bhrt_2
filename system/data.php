@@ -74,4 +74,15 @@ function update_user($user_id,$firstname,$lastname,$email,$password,$confirm_pas
   }
 }
 
+
+/* *************************************************************************
+/* alle test.php Seiten
+/* ************************************************************************* */
+
+//Fragen abrufen
+function get_fragen(){
+  $sql = "SELECT * FROM fragenkatalog";
+  return get_result($sql);
+  }
+
 ?>
