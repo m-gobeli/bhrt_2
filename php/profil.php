@@ -9,12 +9,15 @@ if(!isset($_SESSION['id'])){
   require_once('../system/data.php');
   require_once('../system/security.php');
 
-//Profildaten abrufen
-  $result = get_username($user_id);
-  $user = mysqli_fetch_assoc($result);
+  //Message, wenn Profil gelöscht wird
+  $delete = false;
+  $delete_msg = "";
+
 
 //Profildaten-Änderungen speichern
+echo "ja";
 if(isset($_POST['update_submit'])){
+  echo "gupdated";
       $firstname = filter_data($_POST['firstname']);
       $lastname = filter_data($_POST['lastname']);
       $email = filter_data($_POST['email']);
@@ -22,13 +25,17 @@ if(isset($_POST['update_submit'])){
       $confirm_password = filter_data($_POST['confirm_password']);
       $taetigkeit = filter_data($_POST['taetigkeit']);
 
-      $result = update_user($user_id);
-      $user = mysqli_fetch_assoc($result);
+      $result = update_user($user_id,$firstname,$lastname,$email,$password,$confirm_password,$taetigkeit);
 }
 // Profil löschen
 if(isset($_POST['delete_profile'])){
-  $result = delete_user($user_id)
+  $result = delete_user($user_id);
+  $delete = true;
+  $delete_msg .= "Sie haben Ihr Profil erfolgreich gelöscht. Klicken Sie bitte auf abmelden.";
 }
+//Profildaten abrufen
+  $result = get_username($user_id);
+  $user = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -125,6 +132,8 @@ if(isset($_POST['delete_profile'])){
 	</section>
 <!-- Modales Fenster zur Userdatenbearbeitung aus w3schools und p42-->
 <div id="myModal" class="modal fade" role="dialog">
+
+  <form method="post" action="profil.php">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -134,6 +143,8 @@ if(isset($_POST['delete_profile'])){
         <h4 class="modal-title">Profildaten bearbeiten</h4>
       </div>
       <div class="modal-body">
+
+
         <div class="form-group row">
           <label for="Vorname" class="col-sm-2 col-xs-12 form-control-label">Vorname</label>
             <div class="col-sm-5 col-xs-6">
@@ -158,11 +169,10 @@ if(isset($_POST['delete_profile'])){
                       name="email" value="<?php echo $user['email']; ?>">
             </div>
         </div>
-<!-- Inhalt von Passwort sollte nicht angezeigt werden -->
         <div class="form-group row">
           <label for="Passwort" class="col-sm-2 col-xs-12 form-control-label">Passwort</label>
             <div class="col-sm-5 col-xs-6">
-              <input  type="passwort" class="form-control form-control-sm"
+              <input  type="password" class="form-control form-control-sm"
                       id="Passwort" placeholder="Passwort"
                       name="password" value="<?php echo $user['passwort']; ?>">
             </div>
@@ -170,7 +180,7 @@ if(isset($_POST['delete_profile'])){
         <div class="form-group row">
           <label for="Passwort_Conf" class="col-sm-2 col-xs-12 form-control-label">Passwort bestätigen</label>
             <div class="col-sm-5 col-xs-6">
-              <input  type="passwort" class="form-control form-control-sm"
+              <input  type="password" class="form-control form-control-sm"
                       id="Passwort_Conf" placeholder="Passwort"
                       name="confirm_password" value="<?php echo $user['passwort']; ?>">
             </div>
@@ -185,18 +195,18 @@ if(isset($_POST['delete_profile'])){
               </select>
             </div>
         </div>
-
       </div>
 
 <!-- Speichern-Button -->
       <div class="modal-footer">
-        <button type="submit" class="btn btn-success btn-sm" name="update_submit" data-dismiss="modal">Speichern</button>
+        <button type="submit" class="btn btn-success btn-sm" name="update_submit">Speichern</button>
       </div>
       <div class="modal-footer">
         <button type="submit" class="btn btn-success btn-sm" name="delete_profile" data-dismiss="modal">Profil löschen</button>
       </div>
     </div>
   </div>
+  </form>
 </div>
 
 <!-- Testergebnisse User -->
