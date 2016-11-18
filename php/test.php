@@ -81,7 +81,6 @@
         </div>
 
         <div class="container">
-<<<<<<< HEAD
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h3 class="section-heading">Frage 1</h3>
@@ -101,7 +100,6 @@
                   </div>
               </div>
           </div>
-=======
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h3 class="section-heading">Frage 1</h3>
@@ -112,7 +110,6 @@
                     </div>
                 </div>
             </div>
->>>>>>> 1581cfc53b20c40168f1f58c107b65619bcefa4b
         </div>
 
         <div class="container">
