@@ -3,3 +3,7 @@
 .boxed {
   border: 3px solid #f05f40;
 }
+
+#ex1Slider .slider-selection {
+	background: #f05f40;
+}

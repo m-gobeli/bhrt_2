@@ -60,13 +60,7 @@
         <!-- /.container-fluid -->
     </nav>
     <aside class="bg-dark">
-      <br>
-      <br>
         <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Starte jetzt deinen Laufbahntest</h2>
-                  <p>Finde heraus was für ein Typ du bist und welche Berufsfelder am besten für dich geeignet sind</p>
-            </div>
         </div>
     </aside>
 
@@ -83,20 +77,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 1</h3>
-                    <div class="boxed">
-                      <p> Fragentext</p>
-                        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-                                            
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 2</h3>
+                    <h3 class="section-heading">Frage 11</h3>
                     <div class="boxed">
                       <p> Fragentext</p>
                     </div>
@@ -107,7 +88,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 3</h3>
+                    <h3 class="section-heading">Frage 12</h3>
+                    <div class="boxed">
+                      <p> Fragentext</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h3 class="section-heading">Frage 13</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                         </div>
@@ -117,7 +109,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 4</h3>
+                    <h3 class="section-heading">Frage 14</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                         </div>
@@ -127,7 +119,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 5</h3>
+                    <h3 class="section-heading">Frage 15</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                         </div>
@@ -138,7 +130,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 6</h3>
+                    <h3 class="section-heading">Frage 16</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                         </div>
@@ -148,7 +140,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 7</h3>
+                    <h3 class="section-heading">Frage 17</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                         </div>
@@ -159,7 +151,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 8</h3>
+                    <h3 class="section-heading">Frage 18</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                         </div>
@@ -169,7 +161,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 9</h3>
+                    <h3 class="section-heading">Frage 19</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                         </div>
@@ -179,11 +171,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 10</h3>
+                    <h3 class="section-heading">Frage 20</h3>
                       <div class="boxed">
                         <p> Fragentext</p>
                       </div>
-                      <a href="../php/test2.php" class="btn btn-default btn-xl sr-button">weiter</a>
+                      <a href="../php/test3.php" class="btn btn-default btn-xl sr-button">weiter</a>
                 </div>
             </div>
         </div>
