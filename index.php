@@ -160,7 +160,8 @@ if(isset($_POST['registration_submit'])){
                         <label class="control-label col-sm-2 field required" for="taetigkeit">Tätigkeit*:</label>
                         <div class="col-sm-10">
                         <select name="taetigkeit" class="form-control" id="taetigkeit" tabindex="3">
-                          <option value="schueler" selected>SchülerIn</option>
+                          <option value="undefined" selected>Bitte wählen Sie aus...</option>
+                          <option value="schueler">SchülerIn</option>
                           <option value="student">StudentIn</option>
                           <option value="berufstaetig">Berufstätig</option>
                         </select>
@@ -169,7 +170,7 @@ if(isset($_POST['registration_submit'])){
           						<div class="form-group">
           						  <label class="control-label col-sm-2 field required" for="email">E-Mail*:</label>
           						  <div class="col-sm-10">
-          							<input type="email" class="form-control" id="email" tabindex="4" name="email" placeholder="max@muster.ch" value="">
+          							<input type="email" class="form-control" id="email" tabindex="4" name="email" placeholder="max@muster.ch" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
           						  </div>
           						</div>
           						<div class="form-group">
