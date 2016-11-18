@@ -1,4 +1,14 @@
+<?php
+session_start();
+if(!isset($_SESSION['id'])){
+  header("Location:../index.php");
+}else{
+  $user_id = $_SESSION['id'];
+}
 
+  require_once('../system/data.php');
+  require_once('../system/security.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,7 +93,7 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 1</h3>
+                <h3 class="section-heading">1</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -104,71 +114,7 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 2</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 3</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 4</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 5</h3>
+                <h3 class="section-heading">2</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -190,7 +136,7 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 6</h3>
+                <h3 class="section-heading">3</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -211,7 +157,28 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 7</h3>
+                <h3 class="section-heading">4</h3>
+                  <div class="boxed">
+                    <p> Fragentext</p>
+                      <div class"col-lg-8 col-lg-offset-2">
+                        <form>
+                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                            <div class="col-lg-4 left">
+                              <p>geringes Interesse</p>
+                            </div>
+                            <div class="col-lg-4 col-lg-offset-4 right">
+                              <p>grosses Interesse</p>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h3 class="section-heading">5</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -233,7 +200,7 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 8</h3>
+                <h3 class="section-heading">6</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -254,7 +221,29 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 9</h3>
+                <h3 class="section-heading">7</h3>
+                  <div class="boxed">
+                    <p> Fragentext</p>
+                      <div class"col-lg-8 col-lg-offset-2">
+                        <form>
+                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                            <div class="col-lg-4 left">
+                              <p>geringes Interesse</p>
+                            </div>
+                            <div class="col-lg-4 col-lg-offset-4 right">
+                              <p>grosses Interesse</p>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h3 class="section-heading">8</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -275,7 +264,28 @@
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">Frage 10</h3>
+                <h3 class="section-heading">9</h3>
+                  <div class="boxed">
+                    <p> Fragentext</p>
+                      <div class"col-lg-8 col-lg-offset-2">
+                        <form>
+                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                            <div class="col-lg-4 left">
+                              <p>geringes Interesse</p>
+                            </div>
+                            <div class="col-lg-4 col-lg-offset-4 right">
+                              <p>grosses Interesse</p>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h3 class="section-heading">10</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
