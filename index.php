@@ -56,14 +56,13 @@ if(isset($_POST['registration_submit'])){
         }else{
           $error=true;
           $error_msg.= "Leider ist die Datenbankverbindung schiefgelaufen. Versuchen Sie es bitte erneut.";
-        }    
+        }
     }else{
       $error = true;
       $error_msg .= "Passwörter stimmen nicht überein. Bitte überprüfen Sie Ihre Eingabe.";
     }
   }
 }
-
 
   ?>
 <!DOCTYPE html>
