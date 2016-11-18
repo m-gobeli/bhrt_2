@@ -1,6 +1,16 @@
+<?php
+session_start();
+if(isset($_SESSION['id'])) unset($_SESSION['id']);
+session_destroy();
 
+$error = false;
+$error_msg = "";
+$success = false;
+$success_msg = "";
 
-
+$success=true;
+$success_msg.="Glückwunsch! Sie haben sich erfolgreich registiert.</br> Bitte loggen Sie sich jetzt ein.";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +38,8 @@
 </head>
 
 <body id="page-top">
-
+    <!-- Ausgabe Erfolgsmeldung -->
+  <?php   if($error) echo $success_msg ; ?>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->

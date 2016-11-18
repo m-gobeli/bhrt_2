@@ -15,42 +15,52 @@
 
 // Registrierung
 if(isset($_POST['registration_submit'])){
+//Überprüfen, ob das Inputfeld ausgefüllt wurde u sonst konkrete Fehlermeldung ausgeben
+  if(empty($_POST['firstname'])){
+    $error = true;
+    $error_msg .= "Bitte geben Sie Ihren Vornamen ein.<br>";
+  }
+  if(!$_POST['lastname']){
+    $error = true;
+    $error_msg .= "Bitte geben Sie Ihren Nachnamen ein.<br>";
+  }
+  if(!$_POST['taetigkeit']){
+    $error = true;
+    $error_msg .= "Bitte geben Sie Ihre Tätigkeit an.<br>";
+  }
+  if(!$_POST['email']){
+    $error = true;
+    $error_msg .= "Bitte geben Sie Ihre Email-Adresse ein.<br>";
+  }
+  if(!$_POST['password']){
+    $error = true;
+    $error_msg .= "Bitte geben Sie ein Passwort ein.<br>";
+  }
+  if(!$_POST['confirm_password']){
+    $error = true;
+    $error_msg .= "Bitte bestätigen Sie Ihr Passwort.<br>";
+  }
   $firstname = filter_data($_POST['firstname']);
   $lastname = filter_data($_POST['lastname']);
   $taetigkeit = filter_data($_POST['taetigkeit']);
   $email = filter_data($_POST['email']);
   $password = filter_data($_POST['password']);
-  $pasword_confirm = filter_data($_POST['confirm_password']);
+  $confirm_password = filter_data($_POST['confirm_password']);
 
-//Überprüfen, ob das Inputfeld ausgefüllt wurde u sonst konkrete Fehlermeldung ausgeben
-  if(!$_POST['firstname']){
-    $errName = "Bitte geben Sie Ihren Vornamen ein.";
-  }
-  if(!$_POST['lastname']){
-    $errLastname = "Bitte geben Sie Ihren Nachnamen ein.";
-  }
-  if(!$_POST['taetigkeit']){
-    $errTaetigkeit = "Bitte geben Sie Ihre Tätigkeit an.";
-  }
-  if(!$_POST['email']){
-    $errEmail = "Bitte geben Sie Ihre Email-Adresse ein.";
-  }
-  if(!$_POST['password']){
-    $errPassword = "Bitte geben Sie ein Passwort ein.";
-  }
-  if(!$_POST['confirm_password']){
-    $errConfirmPassword = "Bitte bestätigen Sie Ihr Passwort.";
-  }
-
-  if($password == $confirm_password){
-    if(register($firstname,$lastname,$taetigkeit,$email, $password)){
-        $success=true;
-        $success_msg.="Glückwunsch! Sie haben sich erfolgreich registiert.</br> Bitte loggen Sie sich jetzt ein.";
-      }else{
-        $error=true;
-        $error_msg.= "Leider ist etwas schiefgelaufen. Versuchen Sie es bitte erneut.";
-      }
-      mysqli_close($db);
+  if(!empty($_POST['firstname']) && !empty($_POST['lastname']) && !empty($_POST['taetigkeit']) && !empty($_POST['email'])&& !empty($_POST['password'])&& !empty($_POST['confirm_password'])){
+    if($password == $confirm_password){
+      if(register($firstname,$lastname,$taetigkeit,$email, $password)){
+// Hier auf die Login-Seite verlinken u. erst dort die success msg anzeigen !!
+          header("Location:php/login.php");
+          mysqli_close($db);
+        }else{
+          $error=true;
+          $error_msg.= "Leider ist die Datenbankverbindung schiefgelaufen. Versuchen Sie es bitte erneut.";
+        }    
+    }else{
+      $error = true;
+      $error_msg .= "Passwörter stimmen nicht überein. Bitte überprüfen Sie Ihre Eingabe.";
+    }
   }
 }
 
@@ -82,11 +92,12 @@ if(isset($_POST['registration_submit'])){
 
     <!-- eigenes CSS-->
     <link href="css/design.css" rel="stylesheet">
-    
+
 </head>
 
 <body id="page-top">
-
+  <!-- Ausgabe Fehlermeldung -->
+  <?php   if($error) echo $error_msg ; ?>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -96,7 +107,6 @@ if(isset($_POST['registration_submit'])){
                 </button>
                 <a class="navbar-brand" href="index.php">BHRT</a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -127,8 +137,6 @@ if(isset($_POST['registration_submit'])){
         </div>
     </header>
 	<!-- Header Ende -->
-
-
 	<!-- Registrierung -->
 	<section class="bg-primary" id="registration">
         <div class="container">
