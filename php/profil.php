@@ -25,7 +25,10 @@ if(isset($_POST['update_submit'])){
       $result = update_user($user_id);
       $user = mysqli_fetch_assoc($result);
 }
-
+// Profil löschen
+if(isset($_POST['delete_profile'])){
+  $result = delete_user($user_id)
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -98,6 +101,7 @@ if(isset($_POST['update_submit'])){
                       <p>Email:<?php echo " " .$user['email'];?></p>
                       <p>Tätigkeit:<?php echo " " .$user['taetigkeit'];?> </p>
                       </div>
+                </div>
           	<!--					<div class="form-group">
           						  <label class="control-label col-sm-2" for="pwd">Passwort:</label>
           						  <div class="col-sm-10">
@@ -106,9 +110,13 @@ if(isset($_POST['update_submit'])){
           						</div>
           						<div class="form-group"> -->
 <!-- Button, der das Modale Fenster zur Datenbearbeitung aufruft -->
+              <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
                       <div>
                         <button type="button" class="btn btn-default btn-xl sr-button" data-toggle="modal" data-target="#myModal">bearbeiten</button>
                       </div>
+                    </div></div>
                   </div>
 					  </form>
 					</div>
@@ -183,6 +191,9 @@ if(isset($_POST['update_submit'])){
 <!-- Speichern-Button -->
       <div class="modal-footer">
         <button type="submit" class="btn btn-success btn-sm" name="update_submit" data-dismiss="modal">Speichern</button>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success btn-sm" name="delete_profile" data-dismiss="modal">Profil löschen</button>
       </div>
     </div>
   </div>
