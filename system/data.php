@@ -34,6 +34,24 @@ function login($email,$password){
   return get_result($sql);
 }
 
+/* *************************************************************************
+/* profil.php
+/* ************************************************************************* */
+//Name im Profil anzeigen
+function get_username($user_id){
+  $sql = "SELECT * FROM user_tabelle WHERE user_id = '$user_id';";
+  return get_result($sql);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

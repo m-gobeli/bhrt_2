@@ -8,8 +8,12 @@ if(!isset($_SESSION['id'])){
 
   require_once('../system/data.php');
   require_once('../system/security.php');
-?>
 
+//Profildaten abrufen
+  $result = get_username($user_id);
+  $user = mysqli_fetch_assoc($result);
+
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,12 +71,13 @@ if(!isset($_SESSION['id'])){
         <!-- /.container-fluid -->
     </nav>
 
-	<!-- Registrierung -->
+	<!-- Userprofil -->
 	<section class="bg-primary" id="registration">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Dein Profil <br> *Name User*</h2>
+<!-- Profildaten über Funktion get_username abrufen -->
+                    <h2 class="section-heading">Dein Profil:<br><?php echo $user['vorname'] . " " . $user['name'];?></h2>
                     <hr class="light">
                     <form class="form-horizontal">
           				  <div>
@@ -101,7 +106,7 @@ if(!isset($_SESSION['id'])){
 		</div>
 	</section>
 
-
+<!-- Testergebnisse User -->
     <section id="about">
         <div class="container">
             <div class="row">
