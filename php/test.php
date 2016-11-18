@@ -31,7 +31,7 @@
 <body id="page-top">
 
 <!-- Navbar -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top nav-black">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -81,7 +81,6 @@
         </div>
 
         <div class="container">
-<<<<<<< HEAD
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h3 class="section-heading">Frage 1</h3>
@@ -101,20 +100,7 @@
                   </div>
               </div>
           </div>
-=======
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h3 class="section-heading">Frage 1</h3>
-                    <div class="boxed">
-                      <p> Fragentext</p>
-                        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-
-                    </div>
-                </div>
-            </div>
->>>>>>> 1581cfc53b20c40168f1f58c107b65619bcefa4b
         </div>
-
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">

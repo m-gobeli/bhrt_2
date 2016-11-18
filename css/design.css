@@ -2,7 +2,7 @@
 
 .boxed {
   border: 3px solid #f05f40;
-  margin-top: 10px;
+  margin: 20px;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
@@ -15,4 +15,8 @@
 
 .right{
   text-align: right;
+}
+
+.nav-black{
+  background-color: #222222;
 }
