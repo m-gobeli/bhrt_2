@@ -41,7 +41,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#login">Login</a>
+                        <a class="page-scroll" href="login.php">Profil</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="test.php">Test</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="../index.php">abmelden</a>
                     </li>
                 </ul>
             </div>
@@ -93,43 +99,6 @@
                     <hr class="light">
                     <p>Lorem Impsum Datenbank-Abfrage lalala. </p>
                     <a href="#services" class="page-scroll btn btn-default btn-xl sr-button">Jetzt loslegen!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="no-padding" id="kontakt">
-        <div class="container-fluid">
-            <div class="row no-gutter popup-gallery">
-                <div class="col-lg-6 col-sm-6">
-                    <a href="img/portfolio/fullsize/typologien.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/typologien.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Test für...
-                                </div>
-                                <div class="project-name">
-                                    Schüler<br>Studenten<br>Berufstätige
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                    <a href="img/portfolio/fullsize/personalberater.jpg" class="portfolio-box">
-                        <img src="img/portfolio/thumbnails/personalberater.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Weiterführende Infos für...
-                                </div>
-                                <div class="project-name">
-                                    Personalberater
-                                </div>
-                            </div>
-                        </div>
-                    </a>
                 </div>
             </div>
         </div>
