@@ -69,16 +69,6 @@ if(!isset($_SESSION['id'])){
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <aside class="bg-dark">
-      <br>
-      <br>
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Starte jetzt deinen Laufbahntest</h2>
-                  <p>Finde heraus was für ein Typ du bist und welche Berufsfelder am besten für dich geeignet sind</p>
-            </div>
-        </div>
-    </aside>
 
     <section id="about">
         <div class="container">
@@ -93,28 +83,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">6</h3>
-                  <div class="boxed">
-                    <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
-                  </div>
-              </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">7</h3>
+                <h3 class="section-heading">21</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -136,7 +105,29 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">8</h3>
+                <h3 class="section-heading">22</h3>
+                  <div class="boxed">
+                    <p> Fragentext</p>
+                      <div class"col-lg-8 col-lg-offset-2">
+                        <form>
+                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                            <div class="col-lg-4 left">
+                              <p>geringes Interesse</p>
+                            </div>
+                            <div class="col-lg-4 col-lg-offset-4 right">
+                              <p>grosses Interesse</p>
+                            </div>
+                        </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h3 class="section-heading">23</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -157,7 +148,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">9</h3>
+                <h3 class="section-heading">24</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -178,7 +169,7 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">10</h3>
+                <h3 class="section-heading">25</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
@@ -193,9 +184,13 @@ if(!isset($_SESSION['id'])){
                         </form>
                       </div>
                   </div>
-                  <a href="../php/test3.php" class="btn btn-default btn-xl sr-button">weiter</a>
+                  <a href="../php/profil.php" class="btn btn-default btn-xl sr-button">auswerten</a>
               </div>
           </div>
+        </div>
+    </section>
+                </div>
+            </div>
         </div>
 
     </section>
