@@ -25,6 +25,9 @@
     <!-- Theme CSS -->
     <link href="css/creative.min.css" rel="stylesheet">
 
+    <!-- eigenes CSS-->
+    <link href="css/design.css" rel="stylesheet">
+    
 </head>
 
 <body id="page-top">
