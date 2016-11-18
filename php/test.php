@@ -16,7 +16,7 @@ if(!isset($_SESSION['id'])){
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>BHRT Laufbahnberatung</title>
 
     <!-- Bootstrap CSS -->
@@ -95,7 +95,7 @@ if(!isset($_SESSION['id'])){
               <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h3 class="section-heading">1</h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" class="input[type=range]" name="points" min="0.1" max="0.9" step="0.1">
