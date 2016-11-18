@@ -85,7 +85,7 @@ function delete_user($user_id){
 
 //Fragen abrufen
 function get_fragen(){
-  $sql = "SELECT * FROM fragenkatalog";
+  $sql = "SELECT sortierungs_schluessel, inhalt FROM fragenkatalog";
   return get_result($sql);
   }
 

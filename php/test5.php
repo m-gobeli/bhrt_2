@@ -12,6 +12,7 @@ if(!isset($_SESSION['id'])){
 //Fragen abrufen und in Variabel abspeichern
 $result = get_fragen();
 $fragen = mysqli_fetch_assoc($result);
+asort($fragen);
 
 ?>
 <!DOCTYPE html>
@@ -90,7 +91,7 @@ $fragen = mysqli_fetch_assoc($result);
               <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h3 class="section-heading">21</h3>
                   <div class="boxed">
-                    <p>Fragentext</p>
+                    <p><?php echo $fragen[20];?></p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
