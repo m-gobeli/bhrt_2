@@ -140,7 +140,7 @@ if(isset($_POST['registration_submit'])){
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Registrieren</h2>
                     <hr class="light">
-                    <p>Gleich gehts los... Bevor der Test beginnt, musst Du Dich noch kurz registrieren.<br>Du hast schon ein Profil? Ja dann los, logge Dich <a href="php/login.php">hier</a> ein.</p>
+                    <p>Gleich gehts los... Bevor der Test beginnt, musst Du Dich noch kurz registrieren.<br>Du hast schon ein Profil? Ja dann los, logge Dich <a href="php/login.php">HIER</a> ein.</p>
 <!--action- attribut gelöscht. Bei Fehler wieder einfügen-->
                     <form class="form-horizontal" id="registration_form" method="post">
           						<div class="form-group">
