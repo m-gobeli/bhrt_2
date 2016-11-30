@@ -91,14 +91,14 @@ asort($fragen);
               <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h3 class="section-heading">21</h3>
                   <div class="boxed">
-                    <p><?php echo $fragen[20];?></p>
-                      <div class"col-lg-8 col-lg-offset-2">
+                    <p> Fragentext</p>
+                      <div class"col-xs-8 col-xs-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -114,13 +114,13 @@ asort($fragen);
                 <h3 class="section-heading">22</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
+                      <div class"col-xs-8 col-xs-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -136,13 +136,13 @@ asort($fragen);
                 <h3 class="section-heading">23</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
+                      <div class"col-xs-8 col-xs-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -157,13 +157,13 @@ asort($fragen);
                 <h3 class="section-heading">24</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
+                      <div class"col-xs-8 col-xs-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -178,13 +178,13 @@ asort($fragen);
                 <h3 class="section-heading">25</h3>
                   <div class="boxed">
                     <p> Fragentext</p>
-                      <div class"col-lg-8 col-lg-offset-2">
+                      <div class"col-xs-8 col-xs-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
