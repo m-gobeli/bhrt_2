@@ -9,15 +9,12 @@ if(!isset($_SESSION['id'])){
   require_once('../system/data.php');
   require_once('../system/security.php');
 
-  //Message, wenn Profil gelöscht wird
+//Message, wenn Profil gelöscht wird
   $delete = false;
   $delete_msg = "";
 
-
 //Profildaten-Änderungen speichern
-echo "ja";
 if(isset($_POST['update_submit'])){
-  echo "gupdated";
       $firstname = filter_data($_POST['firstname']);
       $lastname = filter_data($_POST['lastname']);
       $email = filter_data($_POST['email']);
@@ -26,13 +23,14 @@ if(isset($_POST['update_submit'])){
       $taetigkeit = filter_data($_POST['taetigkeit']);
 
       $result = update_user($user_id,$firstname,$lastname,$email,$password,$confirm_password,$taetigkeit);
+      echo "Ihre Daten wurden aktualisiert.";
 }
 // Profil löschen
 if(isset($_POST['delete_profile'])){
   $result = delete_user($user_id);
-  $delete = true;
-  $delete_msg .= "Sie haben Ihr Profil erfolgreich gelöscht. Klicken Sie bitte auf abmelden.";
+  header("Location:../index.php");
 }
+
 //Profildaten abrufen
   $result = get_username($user_id);
   $user = mysqli_fetch_assoc($result);
@@ -116,6 +114,7 @@ if(isset($_POST['delete_profile'])){
           						  </div>
           						</div>
           						<div class="form-group"> -->
+
 <!-- Button, der das Modale Fenster zur Datenbearbeitung aufruft -->
               <div class="container">
                 <div class="row">
@@ -201,8 +200,10 @@ if(isset($_POST['delete_profile'])){
       <div class="modal-footer">
         <button type="submit" class="btn btn-success btn-sm" name="update_submit">Speichern</button>
       </div>
+<!-- Löschen-Button -->
+<!-- Öffnet ein Confirm-Fenster mit jQuery. Code am Ende dieser Seite -->
       <div class="modal-footer">
-        <button type="submit" class="btn btn-success btn-sm" name="delete_profile" data-dismiss="modal">Profil löschen</button>
+        <button type="submit" class="btn btn-danger btn-sm delete_profile" name="delete_profile">Profil löschen</button>
       </div>
     </div>
   </div>
@@ -265,6 +266,19 @@ if(isset($_POST['delete_profile'])){
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+<!-- Confirm-Box zu "Profil löschen"-Button -->
+<!-- wenn true (also auf ok geklickt wird), dann wir ausgeführt, andernfalls wird die Ausführung verhindert -->
+    <script>
+      $('.delete_profile').click(confirmDelete);
+
+      function confirmDelete(event){
+      var conf = confirm("Wollen Sie Ihr Profil wirklich löschen? Ihre Testresultate sind danach nicht mehr abrufbar.");
+        if (!conf){
+          event.preventDefault();
+        }
+      }
+    </script>
 
 </body>
 
