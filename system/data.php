@@ -85,9 +85,16 @@ function delete_user($user_id){
 /* alle test.php Seiten
 /* ************************************************************************* */
 
+//Sortierungsschluessel in Array abspeichern
+function get_sortierungs_schluessel(){
+  $sql = "SELECT sortierungs_schluessel FROM fragenkatalog";
+  return get_result($sql);
+}
+
+
 //Fragen abrufen
 function get_fragen(){
-  $sql = "SELECT sortierungs_schluessel, inhalt FROM fragenkatalog";
+  $sql = "SELECT * FROM fragenkatalog WHERE sortierungs_schluessel ='";
   return get_result($sql);
   }
 

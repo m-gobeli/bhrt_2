@@ -8,6 +8,13 @@ if(!isset($_SESSION['id'])){
 
   require_once('../system/data.php');
   require_once('../system/security.php');
+
+//Sortierungsschluessel abrufen
+  $result = get_sortierungs_schluessel();
+  $sortierungs_schluessel = array($result);
+
+//$sortierungs_schluessel = array(1,2,3,4,5);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +100,18 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">1</h3>
+                <h3 class="section-heading">
+                  <?php
+                    if (array_key_exists(4,$sortierungs_schluessel))
+                      {
+                      echo "Key exists!";
+                      }
+                    else
+                      {
+                      echo "Key does not exist!";
+                    }
+                    ?>
+                </h3>
                   <div class="boxed">
                     <p>Fragentext</p>
                       <div class"col-lg-8 col-lg-offset-2">
