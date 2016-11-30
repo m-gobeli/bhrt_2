@@ -271,7 +271,6 @@ if(isset($_POST['delete_profile'])){
 <!-- wenn true (also auf ok geklickt wird), dann wir ausgeführt, andernfalls wird die Ausführung verhindert -->
     <script>
       $('.delete_profile').click(confirmDelete);
-
       function confirmDelete(event){
       var conf = confirm("Wollen Sie Ihr Profil wirklich löschen? Ihre Testresultate sind danach nicht mehr abrufbar.");
         if (!conf){
