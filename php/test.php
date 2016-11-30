@@ -109,10 +109,10 @@ $fragenummer = 1;
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" class="input[type=range]" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -142,10 +142,10 @@ $fragenummer = 1;
                     <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -175,10 +175,10 @@ $fragenummer = 1;
                     <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -207,10 +207,10 @@ $fragenummer = 1;
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -239,10 +239,10 @@ $fragenummer = 1;
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>

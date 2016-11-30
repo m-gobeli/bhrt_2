@@ -74,17 +74,6 @@ if(!isset($_SESSION['id'])){
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <aside class="bg-dark">
-      <br>
-      <br>
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Starte jetzt deinen Laufbahntest</h2>
-                  <p>Finde heraus was für ein Typ du bist und welche Berufsfelder am besten für dich geeignet sind</p>
-            </div>
-        </div>
-    </aside>
-
     <section id="about">
         <div class="container">
             <div class="row">
@@ -115,10 +104,10 @@ if(!isset($_SESSION['id'])){
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -147,10 +136,10 @@ if(!isset($_SESSION['id'])){
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -180,10 +169,10 @@ if(!isset($_SESSION['id'])){
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -212,10 +201,10 @@ if(!isset($_SESSION['id'])){
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -244,10 +233,10 @@ if(!isset($_SESSION['id'])){
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
