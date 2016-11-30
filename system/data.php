@@ -87,11 +87,11 @@ function delete_user($user_id){
 
 
 
-  //Fragen abrufen
-  function get_fragen(){
-    $sql = "SELECT * FROM fragenkatalog;";
-    return get_result($sql);
-    }
+//Fragen abrufen
+function get_fragen(){
+  $sql = "SELECT * FROM fragenkatalog;";
+  return get_result($sql);
+  }
 
 //Antworten in DB antworten_abspeichern
 function antworten_abspeichern($user_id){
