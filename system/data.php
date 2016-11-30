@@ -8,7 +8,7 @@ function get_db_connection(){
 }
 
 function get_result($sql){
-  echo $sql;
+  // echo $sql;
   $db = get_db_connection();
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
@@ -79,7 +79,6 @@ function delete_user($user_id){
   $sql = "DELETE FROM user_antworten WHERE user_id = '$user_id';";
   return get_result($sql);
 }
-
 
 /* *************************************************************************
 /* alle test.php Seiten
