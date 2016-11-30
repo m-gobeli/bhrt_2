@@ -3,7 +3,7 @@
 function get_db_connection(){
   $db = mysqli_connect('localhost','392356_4_1','RSNKf=MOVweQ','392356_4_1')
     or die("Fehler beim Verbindungsaufbau mit dem Datenbank-Server.");
-  mysqli_set_charset($db,"utf-8");
+  mysqli_set_charset($db,"utf8");
   return $db;
 }
 

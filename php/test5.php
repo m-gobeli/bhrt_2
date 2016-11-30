@@ -153,6 +153,7 @@ if(!isset($_SESSION['id'])){
               </div>
           </div>
         </div>
+      </div>
 
         <div class="container">
           <div class="row">
@@ -205,8 +206,6 @@ if(!isset($_SESSION['id'])){
                         echo $frage['inhalt'];
                       ?>
                     </p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                    <p> Fragentext</p>
                       <div class"col-xs-8 col-xs-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -253,12 +252,15 @@ if(!isset($_SESSION['id'])){
                         </form>
                       </div>
                   </div>
-                  <a href="../php/profil.php" class="btn btn-default btn-xl sr-button">auswerten</a>
               </div>
+              <a href="../php/profil.php" class="btn btn-default btn-xl sr-button text-center">auswerten</a>
+
           </div>
         </div>
+
     </section>
                 </div>
+
             </div>
         </div>
 
