@@ -231,7 +231,7 @@ if(isset($_POST['delete_profile'])){
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Empfehle den Test Deinen Freunden weiter!</h2>
-                <a href="http://startbootstrap.com/template-overviews/creative/" class="btn btn-default btn-xl sr-button">Jetzt teilen</a>
+                <a href="http//:../index.php" class="btn btn-default btn-xl sr-button">Jetzt teilen</a>
             </div>
         </div>
     </aside>
