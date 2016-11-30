@@ -94,7 +94,6 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
-<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -103,10 +102,8 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
-=======
                     <p> Fragentext</p>
                       <div class"col-xs-8 col-xs-offset-2">
->>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
@@ -132,7 +129,6 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
-<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -141,10 +137,8 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
-=======
                     <p> Fragentext</p>
                       <div class"col-xs-8 col-xs-offset-2">
->>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
@@ -170,7 +164,6 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
-<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -179,10 +172,8 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
-=======
                     <p> Fragentext</p>
                       <div class"col-xs-8 col-xs-offset-2">
->>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
@@ -207,7 +198,6 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
-<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -216,10 +206,8 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
-=======
                     <p> Fragentext</p>
                       <div class"col-xs-8 col-xs-offset-2">
->>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
@@ -244,7 +232,6 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
-<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -253,10 +240,8 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
-=======
                     <p> Fragentext</p>
                       <div class"col-xs-8 col-xs-offset-2">
->>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
