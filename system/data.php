@@ -8,7 +8,7 @@ function get_db_connection(){
 }
 
 function get_result($sql){
-  // echo $sql;
+  echo $sql;
   $db = get_db_connection();
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
@@ -75,8 +75,9 @@ function update_user($user_id,$firstname,$lastname,$email,$password,$confirm_pas
 
 //Profil löschen
 function delete_user($user_id){
-  $sql = "DELETE FROM user_tabelle WHERE user_id = '$user_id';";
   $sql = "DELETE FROM user_antworten WHERE user_id = '$user_id';";
+  get_result($sql);
+  $sql = "DELETE FROM user_tabelle WHERE user_id = '$user_id';";
   return get_result($sql);
 }
 

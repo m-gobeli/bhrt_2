@@ -86,98 +86,98 @@ if(!isset($_SESSION['id'])){
 
         <div class="container">
           <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+              <h3 class="section-heading">
                   <?php
                   $fragenummer++;
                   echo $fragenummer;
                   ?>
-                </h3>
-                  <div class="boxed">
-                    <p>
-                      <?php
-                        $result = get_fragen($fragenummer);
-                        $frage = mysqli_fetch_assoc($result);
-                        echo $frage['inhalt'];
-                      ?>
-                    </p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-xs-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-xs-4 col-xs-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
+              </h3>
+                <div class="boxed">
+                  <p>
+                    <?php
+                      $result = get_fragen($fragenummer);
+                      $frage = mysqli_fetch_assoc($result);
+                      echo $frage['inhalt'];
+                    ?>
+                  </p>
+                    <div class"col-lg-8 col-lg-offset-2">
+                      <form>
+                        <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                          <div class="col-xs-4 left">
+                            <p>geringes Interesse</p>
+                          </div>
+                          <div class="col-xs-4 col-xs-offset-4 right">
+                            <p>grosses Interesse</p>
+                          </div>
+                      </form>
+                    </div>
+                </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h3 class="section-heading">
+              <?php
+                $fragenummer++;
+                echo $fragenummer;
+              ?>
+            </h3>
+              <div class="boxed">
+                <p>
+                  <?php
+                    $result = get_fragen($fragenummer);
+                    $frage = mysqli_fetch_assoc($result);
+                    echo $frage['inhalt'];
+                  ?>
+                </p>
+                  <div class"col-lg-8 col-lg-offset-2">
+                    <form>
+                      <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                        <div class="col-xs-4 left">
+                          <p>geringes Interesse</p>
+                        </div>
+                        <div class="col-xs-4 col-xs-offset-4 right">
+                          <p>grosses Interesse</p>
+                        </div>
+                      </form>
+                    </div>
               </div>
           </div>
         </div>
       </div>
 
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h3 class="section-heading">
+              <?php
+              $fragenummer++;
+              echo $fragenummer;
+              ?>
+            </h3>
+              <div class="boxed">
+                <p>
                   <?php
-                  $fragenummer++;
-                  echo $fragenummer;
+                    $result = get_fragen($fragenummer);
+                    $frage = mysqli_fetch_assoc($result);
+                    echo $frage['inhalt'];
                   ?>
-                </h3>
-                  <div class="boxed">
-                    <p>
-                      <?php
-                        $result = get_fragen($fragenummer);
-                        $frage = mysqli_fetch_assoc($result);
-                        echo $frage['inhalt'];
-                      ?>
-                    </p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-xs-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-xs-4 col-xs-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                  </div>
-              </div>
-          </div>
-        </div>
-      </div>
-
-        <div class="container">
-          <div class="row">
-              <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">
-                  <?php
-                  $fragenummer++;
-                  echo $fragenummer;
-                  ?>
-                </h3>
-                  <div class="boxed">
-                    <p>
-                      <?php
-                        $result = get_fragen($fragenummer);
-                        $frage = mysqli_fetch_assoc($result);
-                        echo $frage['inhalt'];
-                      ?>
-                    </p>
-                      <div class"col-lg-8 col-lg-offset-2">
-                        <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-xs-4 left">
-                              <p>geringes Interesse</p>
-                            </div>
-                            <div class="col-xs-4 col-xs-offset-4 right">
-                              <p>grosses Interesse</p>
-                            </div>
-                        </form>
-                      </div>
+                </p>
+                  <div class"col-lg-8 col-lg-offset-2">
+                    <form>
+                      <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                        <div class="col-xs-4 left">
+                          <p>geringes Interesse</p>
+                        </div>
+                        <div class="col-xs-4 col-xs-offset-4 right">
+                          <p>grosses Interesse</p>
+                        </div>
+                      </form>
+                    </div>
                   </div>
               </div>
           </div>
@@ -241,19 +241,12 @@ if(!isset($_SESSION['id'])){
                               <p>grosses Interesse</p>
                             </div>
                         </form>
+                      </div>
                   </div>
-              </div>
-              <a href="../php/profil.php" class="btn btn-default btn-xl sr-button text-center">auswerten</a>
-
+            <a href="../php/profil.php" class="btn btn-default btn-xl sr-button text-center">auswerten</a>
           </div>
         </div>
-
-    </section>
-                </div>
-
-            </div>
-        </div>
-
+      </div>
     </section>
 
     <!-- jQuery -->
