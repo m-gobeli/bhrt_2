@@ -83,7 +83,7 @@ if(!isset($_SESSION['id'])){
                 </div>
             </div>
         </div>
-
+<!-- Frage 21 -->
         <div class="container">
           <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -116,7 +116,7 @@ if(!isset($_SESSION['id'])){
           </div>
         </div>
       </div>
-
+<!-- Frage 22 -->
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -149,7 +149,7 @@ if(!isset($_SESSION['id'])){
           </div>
         </div>
       </div>
-
+<!-- Frage 23 -->
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -182,6 +182,7 @@ if(!isset($_SESSION['id'])){
               </div>
           </div>
         </div>
+<!-- Frage 24 -->
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -214,6 +215,7 @@ if(!isset($_SESSION['id'])){
               </div>
           </div>
         </div>
+  <!-- Frage 25 -->
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">

@@ -93,7 +93,7 @@ $fragenummer = 1;
                 </div>
             </div>
         </div>
-
+<!-- Frage 1 -->
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -120,7 +120,7 @@ $fragenummer = 1;
                   </div>
               </div>
           </div>
-
+<!-- Frage 2 -->
         </div>
         <div class="container">
           <div class="row">
@@ -154,7 +154,7 @@ $fragenummer = 1;
               </div>
           </div>
         </div>
-
+<!-- Frage 3 -->
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -187,6 +187,7 @@ $fragenummer = 1;
               </div>
           </div>
         </div>
+<!-- Frage 4 -->
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -219,6 +220,7 @@ $fragenummer = 1;
               </div>
           </div>
         </div>
+<!-- Frage 5 -->
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
