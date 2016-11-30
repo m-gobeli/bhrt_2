@@ -116,7 +116,7 @@ if(isset($_POST['test_submit'])){
                         ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
-                          <input type="range" class="input[type=range]" name="frage<?php echo $frage_id; ?>" id="frage<?php echo $frage_id; ?>" min="0.1" max="0.9" step="0.1">
+                          <input type="range" class="input[type=range]" name="frage<?php echo $frage_id; ?>" id="frage<?php echo $frage_id; ?>" min="1" max="9" step="1">
                             <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
