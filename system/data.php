@@ -8,7 +8,7 @@ function get_db_connection(){
 }
 
 function get_result($sql){
-  echo $sql;
+  // echo $sql;
   $db = get_db_connection();
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
@@ -86,16 +86,19 @@ function delete_user($user_id){
 /* ************************************************************************* */
 
 
-//Fragen abrufen
-function get_fragen($fragenummer){
-  $sql = "SELECT * FROM fragenkatalog WHERE sortierungs_schluessel ='$fragenummer'";
-  return get_result($sql);
-  }
+
+  //Fragen abrufen
+  function get_fragen(){
+    $sql = "SELECT * FROM fragenkatalog;";
+    return get_result($sql);
+    }
 
 //Antworten in DB antworten_abspeichern
-/*function antworten_abspeichern($user_id){
-  $sql = "INSERT INTO user_antworten (user_id, auspraegung) VALUES ('$user_id', )"
-}*/
+function antworten_abspeichern($user_id){
+  $sql = "INSERT INTO user_antworten (user_id, frage_id, auspraegung) VALUES ('$user_id', '$frage', '$' )";
+}
+
+
 
 
 ?>
