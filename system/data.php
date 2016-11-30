@@ -8,7 +8,7 @@ function get_db_connection(){
 }
 
 function get_result($sql){
-  // echo $sql;
+  echo $sql;
   $db = get_db_connection();
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
@@ -75,8 +75,9 @@ function update_user($user_id,$firstname,$lastname,$email,$password,$confirm_pas
 
 //Profil löschen
 function delete_user($user_id){
-  $sql = "DELETE FROM user_tabelle WHERE user_id = '$user_id';";
   $sql = "DELETE FROM user_antworten WHERE user_id = '$user_id';";
+  get_result($sql);
+  $sql = "DELETE FROM user_tabelle WHERE user_id = '$user_id';";
   return get_result($sql);
 }
 
@@ -84,17 +85,17 @@ function delete_user($user_id){
 /* alle test.php Seiten
 /* ************************************************************************* */
 
-//Sortierungsschluessel in Array abspeichern
-function get_sortierungs_schluessel(){
-  $sql = "SELECT sortierungs_schluessel FROM fragenkatalog";
-  return get_result($sql);
-}
-
 
 //Fragen abrufen
 function get_fragen($fragenummer){
   $sql = "SELECT * FROM fragenkatalog WHERE sortierungs_schluessel ='$fragenummer'";
   return get_result($sql);
   }
+
+//Antworten in DB antworten_abspeichern
+/*function antworten_abspeichern($user_id){
+  $sql = "INSERT INTO user_antworten (user_id, auspraegung) VALUES ('$user_id', )"
+}*/
+
 
 ?>

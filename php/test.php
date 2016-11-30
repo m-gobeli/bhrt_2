@@ -12,6 +12,17 @@ if(!isset($_SESSION['id'])){
 //Variable für Abfrage der einzelnen Fragen
 $fragenummer = 1;
 
+// Antworten in DB abspeichern
+/*if(isset($_POST['#btn-weiter'])){
+  $antwort1 = $_POST['#frage1'];
+  $antwort2 = $_POST['#frage2'];
+  $antwort3 = $_POST['#frage3'];
+  $antwort4 = $_POST['#frage4'];
+  $antwort5 = $_POST['#frage5'];
+  $result = antworten_abspeichern($user_id);
+  header("Location:test2.php");
+}*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,7 +119,7 @@ $fragenummer = 1;
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
-                          <input type="range" class="input[type=range]" name="points" min="0.1" max="0.9" step="0.1">
+                          <input type="range" class="input[type=range]" name="points" id="frage1" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
@@ -141,7 +152,7 @@ $fragenummer = 1;
                   </p>
                     <div class"col-lg-8 col-lg-offset-2">
                         <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                          <input type="range" name="points" id="frage2" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
@@ -174,7 +185,7 @@ $fragenummer = 1;
                   </p>
                     <div class"col-lg-8 col-lg-offset-2">
                         <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                          <input type="range" name="points" id="frage3" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
@@ -207,7 +218,7 @@ $fragenummer = 1;
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                          <input type="range" name="points" id="frage4" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
@@ -240,7 +251,7 @@ $fragenummer = 1;
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
-                          <input type="range" name="points" min="0.1" max="0.9" step="0.1">
+                          <input type="range" name="points" id="frage5" min="0.1" max="0.9" step="0.1">
                             <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
@@ -250,11 +261,14 @@ $fragenummer = 1;
                         </form>
                       </div>
                   </div>
-                  <a href="../php/test2.php" class="btn btn-default btn-xl sr-button">weiter</a>
+                  <a href="../php/test2.php" class="btn btn-default btn-xl sr-button" id="btn-weiter">weiter</a>
               </div>
           </div>
         </div>
     </section>
+
+
+
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
@@ -269,6 +283,28 @@ $fragenummer = 1;
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+    <script>
+    //var antwort1 = $("#frage1").val();
+
+
+    //$('#btn-weiter').click(AntwortSpeichern);
+
+    /*function AntwortSpeichern(){
+      var antwort1 = $("#frage1").val();
+      var antwort2 = $("#frage2").val();
+      var antwort3 = $("#frage3").val();
+      var antwort4 = $("#frage4").val();
+      var antwort5 = $("#frage5").val();
+    }*/
+
+    /*function AntwortSpeichern(){
+      var eingabe = document.getElementById("#frage1");
+      var antwort = eingabe.value;
+    }*/
+
+
+    </script>
 
 </body>
 
