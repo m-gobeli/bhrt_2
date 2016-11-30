@@ -8,6 +8,11 @@ if(!isset($_SESSION['id'])){
 
   require_once('../system/data.php');
   require_once('../system/security.php');
+
+  //Variable für Abfrage der einzelnen Fragen
+  $fragenummer = 10;
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,9 +88,20 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">11</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -105,9 +121,20 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">12</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -127,9 +154,20 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">13</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -148,9 +186,20 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">14</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -169,9 +218,20 @@ if(!isset($_SESSION['id'])){
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">15</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">

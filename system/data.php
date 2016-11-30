@@ -8,7 +8,7 @@ function get_db_connection(){
 }
 
 function get_result($sql){
-  echo $sql;
+  //echo $sql;
   $db = get_db_connection();
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
@@ -93,8 +93,8 @@ function get_sortierungs_schluessel(){
 
 
 //Fragen abrufen
-function get_fragen(){
-  $sql = "SELECT * FROM fragenkatalog WHERE sortierungs_schluessel ='";
+function get_fragen($fragenummer){
+  $sql = "SELECT * FROM fragenkatalog WHERE sortierungs_schluessel ='$fragenummer'";
   return get_result($sql);
   }
 

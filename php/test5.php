@@ -9,10 +9,8 @@ if(!isset($_SESSION['id'])){
   require_once('../system/data.php');
   require_once('../system/security.php');
 
-//Fragen abrufen und in Variabel abspeichern
-$result = get_fragen();
-$fragen = mysqli_fetch_assoc($result);
-asort($fragen);
+  //Variable für Abfrage der einzelnen Fragen
+  $fragenummer = 20;
 
 ?>
 <!DOCTYPE html>
@@ -89,9 +87,20 @@ asort($fragen);
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">21</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p><?php echo $fragen[20];?></p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -111,9 +120,20 @@ asort($fragen);
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">22</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -133,9 +153,20 @@ asort($fragen);
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">23</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -154,9 +185,20 @@ asort($fragen);
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">24</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
@@ -175,9 +217,20 @@ asort($fragen);
         <div class="container">
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h3 class="section-heading">25</h3>
+                <h3 class="section-heading">
+                  <?php
+                  $fragenummer++;
+                  echo $fragenummer;
+                  ?>
+                </h3>
                   <div class="boxed">
-                    <p> Fragentext</p>
+                    <p>
+                      <?php
+                        $result = get_fragen($fragenummer);
+                        $frage = mysqli_fetch_assoc($result);
+                        echo $frage['inhalt'];
+                      ?>
+                    </p>
                       <div class"col-lg-8 col-lg-offset-2">
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
