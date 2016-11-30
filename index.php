@@ -118,6 +118,7 @@ if(isset($_POST['registration_submit'])){
 
 	<!-- /. Header -->
     <header>
+    <div class="row">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading">Was für ein Typ bist du?<br>Finde es heraus!</h1>
@@ -131,6 +132,7 @@ if(isset($_POST['registration_submit'])){
 				</div>
             </div>
         </div>
+      </div>
     </header>
 	<!-- Header Ende -->
 	<!-- Registrierung -->
