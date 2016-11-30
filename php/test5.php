@@ -52,7 +52,7 @@ if(!isset($_SESSION['id'])){
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#page-top">BHRT</a>
+                <a class="navbar-brand" href="../index.php">BHRT</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -94,6 +94,7 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
+<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -102,12 +103,16 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
+=======
+                    <p> Fragentext</p>
+                      <div class"col-xs-8 col-xs-offset-2">
+>>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -127,6 +132,7 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
+<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -135,12 +141,16 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
+=======
+                    <p> Fragentext</p>
+                      <div class"col-xs-8 col-xs-offset-2">
+>>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -160,6 +170,7 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
+<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -168,12 +179,16 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
+=======
+                    <p> Fragentext</p>
+                      <div class"col-xs-8 col-xs-offset-2">
+>>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -192,6 +207,7 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
+<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -200,12 +216,16 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
+=======
+                    <p> Fragentext</p>
+                      <div class"col-xs-8 col-xs-offset-2">
+>>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>
@@ -224,6 +244,7 @@ if(!isset($_SESSION['id'])){
                   ?>
                 </h3>
                   <div class="boxed">
+<<<<<<< HEAD
                     <p>
                       <?php
                         $result = get_fragen($fragenummer);
@@ -232,12 +253,16 @@ if(!isset($_SESSION['id'])){
                       ?>
                     </p>
                       <div class"col-lg-8 col-lg-offset-2">
+=======
+                    <p> Fragentext</p>
+                      <div class"col-xs-8 col-xs-offset-2">
+>>>>>>> 5082363979479d2d96046668ca967843981f11df
                         <form>
                           <input type="range" name="points" min="0.1" max="0.9" step="0.1">
-                            <div class="col-lg-4 left">
+                            <div class="col-xs-4 left">
                               <p>geringes Interesse</p>
                             </div>
-                            <div class="col-lg-4 col-lg-offset-4 right">
+                            <div class="col-xs-4 col-xs-offset-4 right">
                               <p>grosses Interesse</p>
                             </div>
                         </form>

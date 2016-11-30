@@ -267,7 +267,7 @@ if(isset($_POST['delete_profile'])){
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
 
-<!-- Confirm-Box zu "Profil löschen"-Button -->
+<!-- Confirm-Box zu "Profil löschen"-Button. Nils-Code-->
 <!-- wenn true (also auf ok geklickt wird), dann wir ausgeführt, andernfalls wird die Ausführung verhindert -->
     <script>
       $('.delete_profile').click(confirmDelete);
