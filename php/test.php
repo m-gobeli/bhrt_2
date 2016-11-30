@@ -14,7 +14,9 @@ $frageliste = get_fragen();
 if(isset($_POST['test_submit'])){
   foreach ($_POST as $key => $value) {
     $frageid = substr($key , 5);
-    echo "Die Frage $frageid hat den Wert $value. <br>";
+    //echo "Die Frage $frageid hat den Wert $value. <br>";
+    $result = insert_antworten($user_id, $frageid, $value);
+  //  header("Location:profil.php");
   }
 
   /*$antwort1 = $_POST['#frage1'];
@@ -105,8 +107,8 @@ if(isset($_POST['test_submit'])){
         </div>
 
         <div class="container">
-<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" >
-<?php while($frage = mysqli_fetch_assoc($frageliste)){  ?>
+        <form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>" >
+        <?php while($frage = mysqli_fetch_assoc($frageliste)){  ?>
           <div class="row">
               <div class="col-lg-8 col-lg-offset-2 text-center">
                 <h3 class="section-heading"><?php echo $frage['sortierungs_schluessel'] ?></h3>
@@ -130,7 +132,7 @@ if(isset($_POST['test_submit'])){
               </div>
           </div>
 <?php } ?>
-          <input type="submit" name="test_submit" class="btn btn-default btn-xl sr-button text-center" value="Jetzt auswerten!">
+            <input type="submit" name="test_submit" class="btn btn-default btn-xl sr-button text-center" value="Jetzt auswerten!">
         </form>
       </div>
     </section>

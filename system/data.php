@@ -8,7 +8,7 @@ function get_db_connection(){
 }
 
 function get_result($sql){
-  // echo $sql;
+  //echo $sql;
   $db = get_db_connection();
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
@@ -93,9 +93,10 @@ function get_fragen(){
   return get_result($sql);
   }
 
-//Antworten in DB antworten_abspeichern
-function antworten_abspeichern($user_id){
-  $sql = "INSERT INTO user_antworten (user_id, frage_id, auspraegung) VALUES ('$user_id', '$frage', '$' )";
+//Antworten in DB abspeichern
+function insert_antworten($user_id, $frageid, $value){
+  $sql = "INSERT INTO user_antworten (user_id, frage_id, auspraegung) VALUES ('$user_id', '$frageid', '$value' );";
+return get_result($sql);
 }
 
 
