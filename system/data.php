@@ -93,11 +93,11 @@ function get_fragen(){
   return get_result($sql);
   }
 
-//Antworten in DB abspeichern
-function insert_antworten($user_id, $frageid, $value){
-  $sql = "INSERT INTO user_antworten (user_id, frage_id, auspraegung) VALUES ('$user_id', '$frageid', '$value' );";
-return get_result($sql);
-}
+  //Antworten in DB abspeichern
+  function insert_antworten($user_id, $frageid, $value){
+  $sql = "INSERT INTO user_antworten (user_id, frage_id, auspraegung) VALUES ('$user_id', '$frageid', '$value');";
+  return get_result($sql);
+  }
 
 
 

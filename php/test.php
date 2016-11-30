@@ -16,12 +16,8 @@ if(isset($_POST['test_submit'])){
     $frageid = substr($key , 5);
     //echo "Die Frage $frageid hat den Wert $value. <br>";
     $result = insert_antworten($user_id, $frageid, $value);
-  //  header("Location:profil.php");
+  header("Location:profil.php");
   }
-
-  /*$antwort1 = $_POST['#frage1'];
-  $result = antworten_abspeichern($user_id,$frage_id_1,$antwort1);
-  header("Location:test2.php");*/
 }
 
 ?>
@@ -138,8 +134,6 @@ if(isset($_POST['test_submit'])){
         </form>
       </div>
     </section>
-
-
 
 
     <!-- jQuery -->
