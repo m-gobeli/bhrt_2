@@ -130,7 +130,9 @@ if(isset($_POST['test_submit'])){
               </div>
           </div>
 <?php } ?>
-          <input type="submit" name="test_submit" class="btn btn-default btn-xl sr-button text-center" value="Jetzt auswerten!">
+        <div style="text-align:center">
+          <input type="submit" name="test_submit" class="btn btn-default btn-xl sr-button" value="Jetzt auswerten!">
+        </div>
         </form>
       </div>
     </section>
