@@ -84,17 +84,17 @@ function delete_user($user_id){
 /* alle test.php Seiten
 /* ************************************************************************* */
 
-//Sortierungsschluessel in Array abspeichern
-function get_sortierungs_schluessel(){
-  $sql = "SELECT sortierungs_schluessel FROM fragenkatalog";
-  return get_result($sql);
-}
-
 
 //Fragen abrufen
 function get_fragen($fragenummer){
   $sql = "SELECT * FROM fragenkatalog WHERE sortierungs_schluessel ='$fragenummer'";
   return get_result($sql);
   }
+
+//Antworten in DB antworten_abspeichern
+/*function antworten_abspeichern($user_id){
+  $sql = "INSERT INTO user_antworten (user_id, auspraegung) VALUES ('$user_id', )"
+}*/
+
 
 ?>
