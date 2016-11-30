@@ -8,11 +8,7 @@ function get_db_connection(){
 }
 
 function get_result($sql){
-<<<<<<< HEAD
-  //echo $sql;
-=======
   // echo $sql;
->>>>>>> 5082363979479d2d96046668ca967843981f11df
   $db = get_db_connection();
   $result = mysqli_query($db,$sql);
   mysqli_close($db);
