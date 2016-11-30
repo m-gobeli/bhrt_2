@@ -249,11 +249,6 @@ if(!isset($_SESSION['id'])){
           </div>
         </div>
     </section>
-                </div>
-            </div>
-        </div>
-
-    </section>
 
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
