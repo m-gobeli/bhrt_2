@@ -11,11 +11,16 @@
   $success = false;
   $success_msg = "";
 
+  $shouldScrollToForm = false;
+
   $db = get_db_connection();
 
 // Registrierung
 if(isset($_POST['registration_submit'])){
 //Überprüfen, ob das Inputfeld ausgefüllt wurde u sonst konkrete Fehlermeldung ausgeben
+
+  $shouldScrollToForm = true;
+
   if(empty($_POST['firstname'])){
     $error = true;
     $error_msg .= "Bitte geben Sie Ihren Vornamen ein.<br>";
@@ -93,7 +98,6 @@ if(isset($_POST['registration_submit'])){
 
 <body id="page-top">
   <!-- Ausgabe Fehlermeldung -->
-  <?php   if($error) echo $error_msg ; ?>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -188,11 +192,16 @@ if(isset($_POST['registration_submit'])){
           						  </div>
           						</div>
           						<div class="form-group">
+                        <button type="submit" class="btn btn-default btn-xl sr-button" id="registration_submit" tabindex="7" name="registration_submit">Test starten!</button>
           						  <div>
-          							<button type="submit" class="btn btn-default btn-xl sr-button" id="registration_submit" tabindex="7" name="registration_submit">Test starten!</button>
           						  </div>
           						</div>
 					  </form>
+            <?php if($error) { ?>
+              <div class="alert alert-danger">
+              <?php echo $error_msg ; ?>
+            </div>
+            <?php } ?>
 					</div>
 			</div>
 		</div>
@@ -226,6 +235,21 @@ if(isset($_POST['registration_submit'])){
 
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
+
+<?php
+if ($shouldScrollToForm) {
+?>
+  <script>
+  // Beim Registireren nach unten scrollen, falls Fehlermeldung ausgegeben wird
+  function scrollWin() {
+      window.scrollTo(0, 850);
+  }
+
+  setTimeout(scrollWin, 0);
+  </script>
+<?php
+}
+?>
 
 </body>
 
