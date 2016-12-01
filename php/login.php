@@ -67,10 +67,8 @@ if(isset($_POST['login_submit'])){
 </head>
 
 <body id="page-top">
-    <!-- Ausgabe Erfolgsmeldung -->
-  <?php   if($error) echo $success_msg ; ?>
   <!-- Ausgabe Fehlermeldung -->
-  <?php   if($error) echo $error_msg ; ?>
+  <?php echo $error_msg;?>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -110,6 +108,11 @@ if(isset($_POST['login_submit'])){
               </div>
             </div>
 					  </form>
+            <?php if($error) { ?>
+              <div class="alert alert-danger">
+              <?php echo $error_msg ; ?>
+            </div>
+            <?php } ?>
 					</div>
 			</div>
 		</div>
