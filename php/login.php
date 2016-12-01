@@ -35,7 +35,7 @@ if(isset($_POST['login_submit'])){
     }
   }else{
     $error = true;
-    $error_msg .="Eingabe fehlt. Bitte füllen Sie beide Felder aus.<br/>";
+    //$error_msg .="Eingabe fehlt. Bitte füllen Sie beide Felder aus.<br/>";
   }
 }
 
