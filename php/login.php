@@ -67,8 +67,6 @@ if(isset($_POST['login_submit'])){
 </head>
 
 <body id="page-top">
-  <!-- Ausgabe Fehlermeldung -->
-  <?php echo $error_msg;?>
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->

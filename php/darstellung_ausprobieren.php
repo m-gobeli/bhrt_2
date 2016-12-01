@@ -77,7 +77,7 @@ if(!isset($_SESSION['id'])){
                 var data = google.visualization.arrayToDataTable([
                             ['Element', 'Prozent', {role: 'style'}],
                             ['', 100, 'white'],
-                            ['Bastler', 11, 'silver'],
+                            ['Bastler', <?php echo " " .$user['user_id'];?>, 'silver'],
                             ['Organisator', 11, 'silver'],
                             ['Forscher', 11, 'silver'],
                             ['Lehrer', 11, 'silver'],
