@@ -88,7 +88,10 @@ function get_typ(){
 }
 
 function verknuepfen($user_id){
-  $sql = "SELECT user_antworten.user_id, user_antworten.frage_id, SUM(user_antworten.auspraegung) AS punktzahl, fragenkatalog.frage_id, fragenkatalog.typ_id FROM user_antworten, fragenkatalog WHERE user_antworten.frage_id = fragenkatalog.frage_id AND user_id = $user_id GROUP BY fragenkatalog.typ_id;";
+  $sql = "SELECT bezeichnung, user_antworten.user_id, user_antworten.frage_id, SUM(user_antworten.auspraegung) AS punktzahl, fragenkatalog.typ_id
+  FROM user_antworten, fragenkatalog, typologien
+  WHERE user_antworten.frage_id = fragenkatalog.frage_id AND fragenkatalog.typ_id = typologien.typ_id AND user_id = $user_id
+  GROUP BY fragenkatalog.typ_id;";
   return get_result($sql);
 }
 
