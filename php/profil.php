@@ -239,7 +239,11 @@ $punktzahl = $allepunkte['punktzahl'];
                     <hr class="light">
                     <p>Hier wird die Auswertung des Users dargestellt. Dazu braucht es eine neue Funktion in data.php </p>
                         <p>
+<<<<<<< HEAD
                           <?php echo $punktzahl[2] ?>
+=======
+                          <?php echo $punktzahl ?>
+>>>>>>> 0b5e9e3141f2309135b571443b2a1db823d8f425
                         </p>
                     <a href="test.php" class="page-scroll btn btn-default btn-xl sr-button">Test wiederholen</a>
                 </div>
