@@ -75,14 +75,13 @@ if(!isset($_SESSION['id'])){
             function drawChart() {
                 // Create the data table.
                 var data = google.visualization.arrayToDataTable([
-                            ['Element', 'Prozent', {
-                        role: 'style'
-                    }],
+                            ['Element', 'Prozent', {role: 'style'}],
+                            ['', 100, 'white'],
                             ['Bastler', 11, 'silver'],
-                            ['Denker', 11, 'silver'],
-                            ['Rechner', 11, 'silver'],
                             ['Organisator', 11, 'silver'],
-                            ['Knuddler', 99, 'silver'], // CSS-style declaration
+                            ['Forscher', 11, 'silver'],
+                            ['Lehrer', 11, 'silver'],
+                            ['Pfleger', 11, 'silver'],
                                  ]);
 
                 // Set chart options
@@ -137,6 +136,7 @@ if(!isset($_SESSION['id'])){
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
+
                         <!-- Profildaten über Funktion get_username abrufen -->
                         <h2 class="section-heading">Dein Profil:<br><?php echo $user['vorname'] . " " . $user['name'];?></h2>
                         <hr class="light">
@@ -155,13 +155,6 @@ if(!isset($_SESSION['id'])){
                             </p>
                     </div>
                 </div>
-                <!--					<div class="form-group">
-          						  <label class="control-label col-sm-2" for="pwd">Passwort:</label>
-          						  <div class="col-sm-10">
-          							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Passwort eingeben">
-          						  </div>
-          						</div>
-          						<div class="form-group"> -->
 
                 <!-- Button, der das Modale Fenster zur Datenbearbeitung aufruft -->
                 <div class="container">
@@ -254,7 +247,8 @@ if(!isset($_SESSION['id'])){
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 text-center">
-                        <h2 class="section-heading">Dein Typ</h2>
+                        <h2 class="section-heading">&#9829;
+                            Whoop, whoop, dein Typ-Profil ist so fly,<br> <?php echo $user['vorname'] . " " . $user['name'];?>!</h2>
                         <hr class="light">
                         <!--Div that will hold the pie chart-->
                         <div id="chart_div"></div>
