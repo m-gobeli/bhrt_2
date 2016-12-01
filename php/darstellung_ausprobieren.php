@@ -9,31 +9,27 @@ if(!isset($_SESSION['id'])){
   require_once('../system/data.php');
   require_once('../system/security.php');
 
-//Message, wenn Profil gelöscht wird
-  $delete = false;
-  $delete_msg = "";
+  //Profildaten-Änderungen speichern
+  if(isset($_POST['update_submit'])){
+        $firstname = filter_data($_POST['firstname']);
+        $lastname = filter_data($_POST['lastname']);
+        $email = filter_data($_POST['email']);
+        $password = filter_data($_POST['password']);
+        $confirm_password = filter_data($_POST['confirm_password']);
+        $taetigkeit = filter_data($_POST['taetigkeit']);
 
-//Profildaten-Änderungen speichern
-if(isset($_POST['update_submit'])){
-      $firstname = filter_data($_POST['firstname']);
-      $lastname = filter_data($_POST['lastname']);
-      $email = filter_data($_POST['email']);
-      $password = filter_data($_POST['password']);
-      $confirm_password = filter_data($_POST['confirm_password']);
-      $taetigkeit = filter_data($_POST['taetigkeit']);
+        $result = update_user($user_id,$firstname,$lastname,$email,$password,$confirm_password,$taetigkeit);
+        echo "Ihre Daten wurden aktualisiert.";
+  }
+  // Profil löschen
+  if(isset($_POST['delete_profile'])){
+    $result = delete_user($user_id);
+    header("Location:../index.php");
+  }
 
-      $result = update_user($user_id,$firstname,$lastname,$email,$password,$confirm_password,$taetigkeit);
-      echo "Ihre Daten wurden aktualisiert.";
-}
-// Profil löschen
-if(isset($_POST['delete_profile'])){
-  $result = delete_user($user_id);
-  header("Location:../index.php");
-}
-
-//Profildaten abrufen
-  $result = get_username($user_id);
-  $user = mysqli_fetch_assoc($result);
+  //Profildaten abrufen
+    $result = get_username($user_id);
+    $user = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,6 +58,51 @@ if(isset($_POST['delete_profile'])){
     <!-- eigenes CSS-->
     <link href="../css/design.css" rel="stylesheet" type="text/css">
 
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+          // Load the Visualization API and the corechart package.
+          google.charts.load('current', {'packages':['corechart']});
+
+          // Set a callback to run when the Google Visualization API is loaded.
+          google.charts.setOnLoadCallback(drawChart);
+
+          // Callback that creates and populates a data table,
+          // instantiates the pie chart, passes in the data and
+          // draws it.
+          function drawChart() {
+
+            // Create the data table.
+            var data = google.visualization.arrayToDataTable([
+                            ['Element', 'Prozent', { role: 'style' }],
+                            ['Bastler', 11, 'silver'],
+                            ['Denker', 11, 'silver'],
+                            ['Rechner', 11, 'silver'],
+                            ['Knuddler', 11, 'silver' ], // CSS-style declaration
+                                 ]);
+
+    /*        var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Topping');
+            data.addColumn('number', 'Prozent');
+            data.addRows([
+              ['Bastler', 3],
+              ['Denker', 3],
+              ['Rechner', 3],
+              ['Knuddler', 3],
+              ['Erfinder', 3]
+            ]);*/
+
+            // Set chart options
+            var options = {'title':'Dein Typen-Profil',
+                           'width': 700,
+                           'height':300};
+
+            // Instantiate and draw our chart, passing in some options.
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+            chart.draw(data, options);
+          }
+  </script>
 </head>
 
 <body id="page-top">
@@ -220,7 +261,8 @@ if(isset($_POST['delete_profile'])){
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Dein Typ</h2>
                     <hr class="light">
-                    <p>Hier wird die Auswertung des Users dargestellt. Dazu braucht es eine neue Funktion in data.php </p>
+                    <!--Div that will hold the pie chart-->
+                    <div id="chart_div"></div>
                     <a href="test.php" class="page-scroll btn btn-default btn-xl sr-button">Test wiederholen</a>
                 </div>
             </div>
@@ -284,109 +326,4 @@ if(isset($_POST['delete_profile'])){
 
 </body>
 
-</html>
-
-
-
-
-
-
-<!DOCTYPE html>
-
-  <!--Load the AJAX API-->
-  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-  <script type="text/javascript">
-
-  // Load the Visualization API and the piechart,table package.
-  google.load('visualization', '1', {'packages':['corechart','table']});
-
-  function drawItems(num) {
-    var jsonPieChartData = $.ajax({
-      url: "getpiechartdata.php",
-      data: "q="+num,
-      dataType:"json",
-      async: false
-    }).responseText;
-
-    var jsonTableData = $.ajax({
-      url: "gettabledata.php",
-      data: "q="+num,
-      dataType:"json",
-      async: false
-    }).responseText;
-
-    // Create our data table out of JSON data loaded from server.
-    var piechartdata = new google.visualization.DataTable(jsonPieChartData);
-    var tabledata = new google.visualization.DataTable(jsonTableData);
-
-    // Instantiate and draw our pie chart, passing in some options.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    chart.draw(piechartdata, {
-      width: 700,
-      height: 500,
-      chartArea: { left:"5%",top:"5%",width:"90%",height:"90%" }
-    });
-
-    // Instantiate and draw our table, passing in some options.
-    var table = new google.visualization.Table(document.getElementById('table_div'));
-    table.draw(tabledata, {showRowNumber: true, alternatingRowStyle: true});
-  }
-
-  </script>
-</head>
-<body>
-  <form>
-  <select name="users" onchange="drawItems(this.value)">
-  <option value="">Select a dogg:</option>
-  <?php
-    $dbuser="database_username";
-    $dbname="database_name";
-    $dbpass="database_password";
-    $dbserver="database_server";
-    // Make a MySQL Connection
-    $con = mysql_connect($dbserver, $dbuser, $dbpass) or die(mysql_error());
-    mysql_select_db($dbname) or die(mysql_error());
-    // Create a Query
-    $sql_query = "SELECT id, nickname FROM user ORDER BY nickname ASC";
-    // Execute query
-    $result = mysql_query($sql_query) or die(mysql_error());
-    while ($row = mysql_fetch_array($result)){
-    echo '<option value='. $row['id'] . '>'. $row['nickname'] . '</option>';
-    }
-    mysql_close($con);
-  ?>
-  </select>
-  </form>
-  <div id="chart_div"></div>
-  <div id="table_div"></div>
-
-
-  <!-- jQuery -->
-  <script src="../vendor/jquery/jquery.min.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="../vendor/scrollreveal/scrollreveal.min.js"></script>
-  <script src="../vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-  <!-- Theme JavaScript -->
-  <script src="js/creative.min.js"></script>
-
-<!-- Confirm-Box zu "Profil löschen"-Button. Nils-Code-->
-<!-- wenn true (also auf ok geklickt wird), dann wir ausgeführt, andernfalls wird die Ausführung verhindert -->
-  <script>
-    $('.delete_profile').click(confirmDelete);
-    function confirmDelete(event){
-    var conf = confirm("Wollen Sie Ihr Profil wirklich löschen? Ihre Testresultate sind danach nicht mehr abrufbar.");
-      if (!conf){
-        event.preventDefault();
-      }
-    }
-  </script>
-
-</body>
 </html>
