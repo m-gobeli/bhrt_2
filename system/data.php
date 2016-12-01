@@ -87,13 +87,13 @@ function get_typ(){
   return get_result($sql);
 }
 
-function verknuepfen(){
-  $sql ="SELECT user_antworten.user_id, user_antworten.frage_id, user_antworten.auspraegung, fragenkatalog.frage_id, fragenkatalog.typ_id FROM user_antworten, fragenkatalog WHERE user_antworten.frage_id = fragenkatalog.frage_id;";
+function verknuepfen($typ_id, $user_id){
+  $sql = "SELECT user_antworten.user_id, user_antworten.frage_id, SUM(user_antworten.auspraegung) AS punktzahl, fragenkatalog.frage_id, fragenkatalog.typ_id FROM user_antworten, fragenkatalog WHERE user_antworten.frage_id = fragenkatalog.frage_id AND user_id = $user_id GROUP BY fragenkatalog.typ_id;";
   return get_result($sql);
 }
 
 function rechnen_typ($user_id, $typ_id){
-  $sql ="SELECT SUM(auspraegung) FROM user_antworten WHERE frageid ='$frage_id';";
+  $sql ="SELECT SUM(auspraegung) FROM user_antworten WHERE frage_id ='$frage_id';";
   return get_result($sql);
 }
 
