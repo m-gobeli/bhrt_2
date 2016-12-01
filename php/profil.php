@@ -37,9 +37,9 @@ if(isset($_POST['delete_profile'])){
 
 //Berechnung Typologien
   $result = get_typ();
-  $typ_id = array();
-  while ($typen = mysqli_fetch_array($result));
-  $typ_id = $typen['typ_id'];
+  while ($typ_id = mysqli_fetch_array($result)){
+  };
+
 
 //foreach loop einbinden
 //  foreach(($result = verknuepfen($typ_id)) as $value){}
@@ -233,14 +233,9 @@ if(isset($_POST['delete_profile'])){
                     <h2 class="section-heading">Dein Typ</h2>
                     <hr class="light">
                     <p>Hier wird die Auswertung des Users dargestellt. Dazu braucht es eine neue Funktion in data.php </p>
-                    <p>
-                      <?php
-                      foreach($typ_id as $typen){
-                        foreach ($typ_id as $key => $value) {
-                          echo $value."<br>";
-                        }
-                      }
-                      ?>
+                        <p>
+                          <?php echo $typ_id[2] ?>
+                        </p>
                     <a href="test.php" class="page-scroll btn btn-default btn-xl sr-button">Test wiederholen</a>
                 </div>
             </div>

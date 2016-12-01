@@ -83,7 +83,7 @@ function delete_user($user_id){
 
 //Berechnung Typologien
 function get_typ(){
-  $sql= "SELECT * FROM typologien;";
+  $sql= "SELECT typ_id FROM typologien;";
   return get_result($sql);
 }
 
