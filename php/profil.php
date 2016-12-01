@@ -36,9 +36,14 @@ if(isset($_POST['delete_profile'])){
   $user = mysqli_fetch_assoc($result);
 
 //Berechnung Typologien
-  $result = get_typ();
+/*  $result = get_typ();
   while ($typ_id = mysqli_fetch_array($result)){
   };
+*/
+
+$result = verknuepfen($user_id);
+$allepunkte = mysqli_fetch_assoc($result);
+$punktzahl = $allepunkte['punktzahl'];
 
 
 //foreach loop einbinden
@@ -234,7 +239,7 @@ if(isset($_POST['delete_profile'])){
                     <hr class="light">
                     <p>Hier wird die Auswertung des Users dargestellt. Dazu braucht es eine neue Funktion in data.php </p>
                         <p>
-                          <?php echo $typ_id[2] ?>
+                          <?php echo $punktzahl[2] ?>
                         </p>
                     <a href="test.php" class="page-scroll btn btn-default btn-xl sr-button">Test wiederholen</a>
                 </div>
