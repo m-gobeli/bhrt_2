@@ -39,8 +39,6 @@ if(isset($_POST['delete_profile'])){
   $frageliste = get_fragen();
   $frage = mysqli_fetch_assoc($frageliste);
   $typ_id = $frage['typ_id'];
-  echo $typ_id;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -117,13 +115,6 @@ if(isset($_POST['delete_profile'])){
                       <p>Tätigkeit:<?php echo " " .$user['taetigkeit'];?> </p>
                       </div>
                 </div>
-          	<!--					<div class="form-group">
-          						  <label class="control-label col-sm-2" for="pwd">Passwort:</label>
-          						  <div class="col-sm-10">
-          							<input type="password" class="form-control" id="pwd" name="pwd" placeholder="Passwort eingeben">
-          						  </div>
-          						</div>
-          						<div class="form-group"> -->
 
 <!-- Button, der das Modale Fenster zur Datenbearbeitung aufruft -->
               <div class="container">
