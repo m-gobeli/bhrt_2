@@ -81,6 +81,12 @@ function delete_user($user_id){
   return get_result($sql);
 }
 
+//Berechnung Typologien
+function rechnen_typ($user_id, $frageid){
+  $sql ="SELECT SUM(auspraegung) FROM user_antworten WHERE frageid ='$frageid';";
+  return get_result($sql);
+}
+
 /* *************************************************************************
 /* alle test.php Seiten
 /* ************************************************************************* */
