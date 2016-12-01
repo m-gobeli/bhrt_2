@@ -36,21 +36,22 @@ if(isset($_POST['delete_profile'])){
   $user = mysqli_fetch_assoc($result);
 
 //Berechnung Typologien
-  $typenliste = get_typ();
-  $typen = mysqli_fetch_assoc($typenliste);
-  $typ_id = array($typen['typ_id']);
+  $result = get_typ();
+  $typ_id = array();
+  while ($typen = mysqli_fetch_array($result));
+  $typ_id = $typen['typ_id'];
 
 //foreach loop einbinden
 //  foreach(($result = verknuepfen($typ_id)) as $value){}
-  foreach($typ_id as $value){
-  $result = verknuepfen($typ_id, $user_id);
+//  foreach($typ_id as $value){
+  /*$result = verknuepfen($typ_id, $user_id);
   $allepunkte = mysqli_fetch_assoc($result);
   $punktzahl = $allepunkte['punktzahl'];
   $zahl5 = 5;
   $multiplikator = 2.5;
   $typ_punktzahl = ($punktzahl - $zahl5) * $multiplikator;
 }
-
+*/
 
 ?>
 <!DOCTYPE html>
@@ -232,7 +233,14 @@ if(isset($_POST['delete_profile'])){
                     <h2 class="section-heading">Dein Typ</h2>
                     <hr class="light">
                     <p>Hier wird die Auswertung des Users dargestellt. Dazu braucht es eine neue Funktion in data.php </p>
-                    <P><<?php echo $typ_punktzahl ?>
+                    <p>
+                      <?php
+                      foreach($typ_id as $typen){
+                        foreach ($typ_id as $key => $value) {
+                          echo $value."<br>";
+                        }
+                      }
+                      ?>
                     <a href="test.php" class="page-scroll btn btn-default btn-xl sr-button">Test wiederholen</a>
                 </div>
             </div>
