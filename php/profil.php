@@ -34,6 +34,13 @@ if(isset($_POST['delete_profile'])){
 //Profildaten abrufen
   $result = get_username($user_id);
   $user = mysqli_fetch_assoc($result);
+
+//Berechnung Typologien
+  $frageliste = get_fragen();
+  $frage = mysqli_fetch_assoc($frageliste);
+  $typ_id = $frage['typ_id'];
+  echo $typ_id;
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
