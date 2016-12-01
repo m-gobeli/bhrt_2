@@ -36,9 +36,11 @@ if(isset($_POST['delete_profile'])){
   $user = mysqli_fetch_assoc($result);
 
 //Berechnung Typologien
-  $frageliste = get_fragen();
-  $frage = mysqli_fetch_assoc($frageliste);
-  $typ_id = $frage['typ_id'];
+  $typenliste = get_typ();
+  $typen = mysqli_fetch_assoc($typenliste);
+  $typ_id = array($typen['typ_id']);
+
+  $result = verknuepfen();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -219,6 +221,7 @@ if(isset($_POST['delete_profile'])){
                     <h2 class="section-heading">Dein Typ</h2>
                     <hr class="light">
                     <p>Hier wird die Auswertung des Users dargestellt. Dazu braucht es eine neue Funktion in data.php </p>
+                    <P><<?php print_r ($typ_id)?>
                     <a href="test.php" class="page-scroll btn btn-default btn-xl sr-button">Test wiederholen</a>
                 </div>
             </div>
